@@ -42,7 +42,7 @@ h1{
 
 .tablero{
     background-color: red;
-    height: 45vh;
+    height: 55vh;
     
 }
 
@@ -82,9 +82,13 @@ h1{
 }
 footer{
     background-color: royalblue;
-    height: 10vh;
+    height: 12vh;
 }
 header{
     background-color: yellow;
-    height: 20vh;
+    height: 14vh;
+}
+.score{
+    background-color: greenyellow;
+    height: 10vh;
 }
