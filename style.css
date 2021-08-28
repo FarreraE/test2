@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorbase: #222831;
+    --colorPrima: #393E46;
+    --colorSecun: #EEEEEE;
+    --colorThird: #EEEEEE;
+    --colorFourth: #EEEEEE; 
+
+    /* --colorbase: #763857;
+    --colorPrima: #F4F9F9;
+    --colorSecun: #F7F6E7;
+    --colorThird: #F7F6E7;
+    --colorFourth: #F7F6E7; 
+
+    --colorbase: #52734D;
+    --colorPrima: #91C788;
+    --colorSecun: #DDFFBC;
+    /*
+    
+    --colorbase: #2e3154;
+    --colorPrima: #57406b;
+    --colorSecun:#e076a5;
+    --colorThird: #ffa5c0;
+    --colorFourth: #925687; 
+
+    */
+}
+
+body {
+    background-color: var(--colorbase);
+    
+}
+h1{
+    color: #EEEEEE;
+    font-size: 2em;
+}
+
+.tablero{
+    background-color: red;
+    height: 45vh;
+    
+}
+
+.row_group_container {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 25%;
+}
+
+.target {
+    color: #303030;
+    width: 24.75%;
+    text-align: center;
+    align-items: center;
+    font-family: monospace;
+    font-size: 2.2em;
+}
+
+.active  {
+    background-color: var(--colorPrima);
+    border: var(--colorbase) solid 2px;
+    opacity: 0.6;
+    color: azure;
+}
+
+.nonActive {
+    background-color: var(--colorSecun);
+    border: var(--colorbase) solid 2px;
+    opacity: 0.8;
+}
+
+.margLeft{
+    margin-left: 1%;
+}
+.margTop{
+    margin-top: 1%;
+}
+footer{
+    background-color: royalblue;
+    height: 10vh;
+}
+header{
+    background-color: yellow;
+    height: 20vh;
+}
