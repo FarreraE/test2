@@ -8,9 +8,6 @@
     --colorbase: #222831;
     --colorPrima: #393E46;
     --colorSecun: #EEEEEE;
-    --colorThird: #EEEEEE;
-    --colorFourth: #EEEEEE; 
-
     /* --colorbase: #763857;
     --colorPrima: #F4F9F9;
     --colorSecun: #F7F6E7;
@@ -33,17 +30,17 @@
 
 body {
     background-color: var(--colorbase);
-    
-}
-h1{
-    color: #EEEEEE;
-    font-size: 2em;
+    max-width: 360px;
+    max-height: 640px;
 }
 
-.tablero{
-    background-color: red;
+h1 {
+    color: #EEEEEE;
+    font-size: 2.2em;
+}
+
+.tablero {
     height: 50vh;
-    
 }
 
 .row_group_container {
@@ -61,7 +58,7 @@ h1{
     font-size: 2.2em;
 }
 
-.active  {
+.active {
     background-color: var(--colorPrima);
     border: var(--colorbase) solid 2px;
     opacity: 0.6;
@@ -74,21 +71,83 @@ h1{
     opacity: 0.8;
 }
 
-.margLeft{
+.margLeft {
     margin-left: 1%;
 }
-.margTop{
+
+.margTop {
     margin-top: 1%;
 }
-footer{
-    background-color: royalblue;
+
+footer {
+    border: 1% solid white;
     height: 12vh;
 }
-header{
-    background-color: pink;
-    height: 27vh;
+
+header {
+    border: 1% solid white;
+    height: 26vh;
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    font-size: 1.8em;
+    color: var(--colorSecun);
 }
-.score{
-    background-color: greenyellow;
+
+.scoreHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.scoreHeaderItem{
+ padding-top: 4%;
+ text-align: end;
+}
+
+.score {
+    border: 1% solid white;
     height: 12vh;
+}
+
+.option {
+    width: 100%;
+    /*Quitar el height despues de la entrega*/
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+}
+
+.optionImg {
+    padding-top: 10%;
+    transform: scale(0.6);
+    opacity: 0.5;
+}
+
+.btn-link{
+    text-decoration: none;
+    color: var(--colorSecun);
+    font-size: 1.5rem;
+    font-weight: bolder;
+    font-family: 'Exo 2', sans-serif;
+    letter-spacing: 0.1rem;
+    color: #ecd60e;
+    opacity: 0.5;
+}
+.btn-link:hover{
+    text-decoration: none;
+    border:none;
+    color: inherit;
+}
+.movement{
+    color: #02f8bb;
+    font-size: 2rem;
+}
+.time{
+    font-size: 2rem;
+    color: #02e4f8;
 }

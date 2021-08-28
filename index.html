@@ -9,11 +9,40 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <!-- GOOGLE FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Inconsolata:wght@300&family=Odibee+Sans&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
     <header>
+
+        <div class="row option">
+            <div class="col-8">
+                <h1>PUZKU</h1>
+            </div>
+            <div class="offset-1 col-3">
+                <img src="img/settings.svg" class=optionImg alt="settings">
+            </div>
+        </div>
+        <div class="container scoreHeader">
+            <div class="col-4 ">
+                <button type="button" class="btn btn-link" onclick="board.reset()">RESET</button>
+            </div>
+            <div class="col-4 scoreHeaderItem">
+                <h2 class="movement">999</h2>
+            </div>
+            <div class="col-4 scoreHeaderItem">
+                <h2 class="time">00:00</h2>
+            </div>
+
+
+        </div>
 
     </header>
     <div class="container">
