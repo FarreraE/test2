@@ -1,24 +1,27 @@
 .scoreMiddle {
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
     .crownImg {
         width: 40%;
     }
 
     .userDisplay {
         //background-color: pink;
-        margin-top: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        h2 {
-            color: var(--colorThird);
-            font-family: 'Exo 2', sans-+serif;
-            font-weight: bold;
-            margin-left: 12%;
-        }
+        margin-bottom: 5%;
+
 
         .nameScore {
             text-align: left;
+
+            h2 {
+                color: var(--colorThird);
+                font-family: 'Exo 2', sans-+serif;
+                font-weight: bold;
+                font-size: 1.8em;
+            }
         }
 
         .movTimScore {
@@ -31,7 +34,7 @@
                 color: var(--colorThird);
                 font-family: 'Exo 2', sans-serif;
                 font-weight: bold;
-                font-size: 2em;
+                font-size: 1.8em;
                 padding-top: 2%;
             }
 

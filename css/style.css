@@ -255,12 +255,7 @@ footer {
   padding-left: 5%;
 }
 
-.scoreMiddle .crownImg {
-  width: 40%;
-}
-
-.scoreMiddle .userDisplay {
-  margin-top: 5%;
+.scoreMiddle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -268,20 +263,31 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.scoreMiddle .userDisplay h2 {
-  color: var(--colorThird);
-  font-family: "Exo 2", sans-serif;
-  font-weight: bold;
-  margin-left: 12%;
+.scoreMiddle .crownImg {
+  width: 40%;
+}
+
+.scoreMiddle .userDisplay {
+  margin-bottom: 5%;
 }
 
 .scoreMiddle .userDisplay .nameScore {
   text-align: left;
+}
+
+.scoreMiddle .userDisplay .nameScore h2 {
+  color: var(--colorThird);
+  font-family: "Exo 2", sans-serif;
+  font-weight: bold;
+  font-size: 1.8em;
 }
 
 .scoreMiddle .userDisplay .movTimScore {
@@ -303,7 +309,7 @@ footer {
   color: var(--colorThird);
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
-  font-size: 2em;
+  font-size: 1.8em;
   padding-top: 2%;
 }
 
