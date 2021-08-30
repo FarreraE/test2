@@ -1,3 +1,4 @@
+/*----------  BOARD SECTION -----*/
 // CLASS BOARD - CARDS
 class Board {
     // INICIALIZA EL TABLERO CON VALOR 0
@@ -393,8 +394,12 @@ function validarRandom(random) {
 function assingnVector(random) {
     randomVector[random - 1] = random;
 }
+/*---------- END BOARD SECTION -----*/
+/*---------- PLAY SECTION -----*/
 // CLASE JUGAR
 
+/*---------- END PLAY SECTION -----*/
+/*---------- PLAYER SECTION -----*/
 // CLASE JUGADOR 
 class Player {
     constructor(playerName, playerID, playerScore, playerSettings) {
@@ -411,14 +416,16 @@ class Score {
     }
 }
 class Settings {
-    constructor(theme, sound) {
+    constructor(theme, music, sound) {
         this.theme = theme;
-        this.sound = sound;
+        this.music = music;
+        this.sound = sound; 
     }
-
 }
 
 let playerList = [];
+
+const styleCss = document.documentElement.style;
 
 const themeGreen = document.getElementById("themeGreen");
 const themePurple = document.getElementById("themePurple");
@@ -432,29 +439,43 @@ themePurple.addEventListener("click", function () { setTheme(1) });
 themeDark.addEventListener("click", function () { setTheme(2) });
 themeLight.addEventListener("click", function () { setTheme(3) });
 
-function setTheme(themeOption) {
-    
+function setTheme(Option) {
+
     themeGreen.className = "themeExample green";
     themePurple.className = "themeExample purple";
     themeDark.className = "themeExample dark";
     themeLight.className = "themeExample light";
+    themeOption = Option;
+    switch (Option) {
 
-    switch (themeOption) {
         case 0:
             themeGreen.className = "themeExample green activeTheme";
-            themeOption = 0;
+            styleCss.setProperty('--colorBase', '#52734D');
+            styleCss.setProperty('--colorPrima', '#91C788');
+            styleCss.setProperty('--colorSecun', '#DDFFBC');
+            styleCss.setProperty('--colorThird', '#EEEEEE');
             break;
         case 1:
             themePurple.className = "themeExample purple activeTheme";
-            themeOption = 1;
+
+            styleCss.setProperty('--colorBase', '#2e3154');
+            styleCss.setProperty('--colorPrima', '#57406b');
+            styleCss.setProperty('--colorSecun', '#e076a5');
+            styleCss.setProperty('--colorThird', '#EEEEEE');
             break;
         case 2:
             themeDark.className = "themeExample dark activeTheme";
-            themeOption = 2;
+            styleCss.setProperty('--colorBase', '#222831');
+            styleCss.setProperty('--colorPrima', '#393E46');
+            styleCss.setProperty('--colorSecun', '#EEEEEE');
+            styleCss.setProperty('--colorThird', '#EEEEEE');
             break;
         case 3:
             themeLight.className = "themeExample light activeTheme";
-            themeOption = 3;
+            styleCss.setProperty('--colorBase', '#EEEEEE');
+            styleCss.setProperty('--colorPrima', '#DDFFBC');
+            styleCss.setProperty('--colorSecun', '#DDFFBC');
+            styleCss.setProperty('--colorThird', '#000000');
             break;
     }
 
@@ -468,12 +489,16 @@ function createUser() {
     playerScore[0] = new Score(0, 0);
     playerScore[1] = new Score(0, 0);
     playerScore[2] = new Score(0, 0);
-    let playerSettings = new Settings(themeOption,true);
-    let newPlayer = new Player(username,1, playerScore, playerSettings);
+
+    const music = document.getElementById("music").checked;
+    const sound = document.getElementById("sound").checked;
+
+    let playerSettings = new Settings(themeOption, music,sound);
+    let newPlayer = new Player(username, 1, playerScore, playerSettings);
 
     playerList.push(newPlayer);
 }
-
+/*---------- END PLAYER SECTION -----*/
 
 // GLOBAL MEMORY
 

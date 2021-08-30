@@ -5,29 +5,29 @@
 }
 
 :root {
-    --colorbase: #222831;
+    --colorBase: #222831;
     --colorPrima: #393E46;
     --colorSecun: #EEEEEE;
     --colorThird: #EEEEEE;
     /**/
-    --colorbase: #763857;
+    --colorBase: #763857;
     --colorPrima: #F4F9F9;
     --colorSecun: #F7F6E7;
     --colorThird: #EEEEEE;
     /**/
-    --colorbase: #2e3154;
+    --colorBase: #2e3154;
     --colorPrima: #57406b;
     --colorSecun: #e076a5;
     --colorThird: #EEEEEE;
     /**/
-    --colorbase: #52734D;
+    --colorBase: #52734D;
     --colorPrima: #91C788;
     --colorSecun: #DDFFBC;
     --colorThird: #EEEEEE;
 }
 
 body {
-    background-color: var(--colorbase);
+    background-color: var(--colorBase);
     max-width: 360px;
     max-height: 640px;
 }
@@ -131,7 +131,7 @@ header {
 
     .active {
         background-color: var(--colorPrima);
-        border: var(--colorbase) solid 2px;
+        border: var(--colorBase) solid 2px;
         opacity: 0.6;
         color: azure;
         font-weight: bolder;
@@ -139,7 +139,7 @@ header {
 
     .nonActive {
         background-color: var(--colorSecun);
-        border: var(--colorbase) solid 2px;
+        border: var(--colorBase) solid 2px;
         opacity: 0.8;
         font-weight: bolder;
     }
