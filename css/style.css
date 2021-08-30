@@ -9,14 +9,17 @@
   --colorbase: #222831;
   --colorPrima: #393E46;
   --colorSecun: #EEEEEE;
+  --colorThird: #EEEEEE;
   /**/
   --colorbase: #763857;
   --colorPrima: #F4F9F9;
   --colorSecun: #F7F6E7;
+  --colorThird: #EEEEEE;
   /**/
   --colorbase: #2e3154;
   --colorPrima: #57406b;
   --colorSecun: #e076a5;
+  --colorThird: #EEEEEE;
   /**/
   --colorbase: #52734D;
   --colorPrima: #91C788;
@@ -273,7 +276,7 @@ footer {
 }
 
 .scoreMiddle .crownImg {
-  width: 40%;
+  width: 20%;
 }
 
 .scoreMiddle hr {
@@ -410,6 +413,7 @@ footer {
 
 .newProfileMiddle form {
   width: 100%;
+  padding-top: 5%;
   font-family: 'Exo 2', sans-serif;
 }
 
@@ -432,10 +436,16 @@ footer {
           align-items: center;
 }
 
+.newProfileMiddle form .themes .themeOption {
+  width: 100%;
+  height: 5rem;
+  padding-top: 2%;
+}
+
 .newProfileMiddle form .themes .themeOption .themeExample {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2.5rem;
   border: 0.2rem solid var(--colorThird);
 }
 
@@ -459,11 +469,14 @@ footer {
   background: linear-gradient(220deg, #b5b5b5 0%, #faffe0 11%, #faffe0 66%, #ededed 94%);
 }
 
-.newProfileMiddle form .themes .themeOption .active {
-  border: 0.2rem solid yellow;
+.newProfileMiddle form .themes .themeOption .activeTheme {
+  border: 0.2rem solid #ffe600;
+  border-radius: 0.5rem;
 }
 
 .newProfileMiddle form .themes .themeOption .themeDescription {
+  position: absolute;
+  padding-top: 3%;
   font-size: 1rem;
   text-align: center;
 }
@@ -495,5 +508,12 @@ footer {
   letter-spacing: 0.1rem;
   border: 0.1rem solid var(--colorSecun);
   font-weight: bold;
+}
+
+.newProfileMiddle h3 {
+  padding-top: 10%;
+  font-family: 'Exo 2', sans-serif;
+  text-decoration: underline;
+  color: var(--colorThird);
 }
 /*# sourceMappingURL=style.css.map */

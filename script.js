@@ -158,7 +158,7 @@ class Card {
 // INICIA EL TABLERO
 const board = new Board(0);
 // VARIABLES GLOBLALES PARA COMPROBAR LA ASIGNACIÓN CORRECTA
- randomVector = [0, 0, 0, 0];
+randomVector = [0, 0, 0, 0];
 let randomCount = 0;
 
 // INICIA LAS CARTAS
@@ -397,7 +397,7 @@ function assingnVector(random) {
 
 // CLASE JUGADOR 
 class Player {
-    constructor(playerName, playerID,playerScore,playerSettings) {
+    constructor(playerName, playerID, playerScore, playerSettings) {
         this.playerName = playerName;
         this.playerID = playerID;
         this.playerScore = playerScore;
@@ -415,9 +415,64 @@ class Settings {
         this.theme = theme;
         this.sound = sound;
     }
+
 }
 
-let playerList = new Player(); 
+let playerList = [];
+
+const themeGreen = document.getElementById("themeGreen");
+const themePurple = document.getElementById("themePurple");
+const themeDark = document.getElementById("themeDark");
+const themeLight = document.getElementById("themeLight");
+
+let themeOption = 0;
+
+themeGreen.addEventListener("click", function () { setTheme(0) });
+themePurple.addEventListener("click", function () { setTheme(1) });
+themeDark.addEventListener("click", function () { setTheme(2) });
+themeLight.addEventListener("click", function () { setTheme(3) });
+
+function setTheme(themeOption) {
+    
+    themeGreen.className = "themeExample green";
+    themePurple.className = "themeExample purple";
+    themeDark.className = "themeExample dark";
+    themeLight.className = "themeExample light";
+
+    switch (themeOption) {
+        case 0:
+            themeGreen.className = "themeExample green activeTheme";
+            themeOption = 0;
+            break;
+        case 1:
+            themePurple.className = "themeExample purple activeTheme";
+            themeOption = 1;
+            break;
+        case 2:
+            themeDark.className = "themeExample dark activeTheme";
+            themeOption = 2;
+            break;
+        case 3:
+            themeLight.className = "themeExample light activeTheme";
+            themeOption = 3;
+            break;
+    }
+
+}
+
+function createUser() {
+    console.log("capturado");
+    //CAPTURA EL USERNAME
+    const username = document.getElementById("username").value;
+    let playerScore = [2];
+    playerScore[0] = new Score(0, 0);
+    playerScore[1] = new Score(0, 0);
+    playerScore[2] = new Score(0, 0);
+    let playerSettings = new Settings(themeOption,true);
+    let newPlayer = new Player(username,1, playerScore, playerSettings);
+
+    playerList.push(newPlayer);
+}
 
 
 // GLOBAL MEMORY

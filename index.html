@@ -28,27 +28,27 @@
 
         <form>
             <div class="mb-3">
-                <label for="username" class="form-label">User name</label>
+                <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">8 Characters Maximum</div>
             </div>
             <div class="mb-3">
-                <label for="username" class="form-label">Theme</label>
+                <label for="username" class="form-label" >Theme</label>
                 <div class="themes">
                     <div class="themeOption">
-                        <div class="themeExample green active"></div>
+                        <div class="themeExample green activeTheme" id="themeGreen"></div>
                         <p class="themeDescription">Green</p>
                     </div>
                     <div class="themeOption">
-                        <div class="themeExample purple"></div>
+                        <div class="themeExample purple" id="themePurple"></div>
                         <p class="themeDescription">Purple</p>
                     </div>
                     <div class="themeOption">
-                        <div class="themeExample dark"></div>
+                        <div class="themeExample dark" id="themeDark"></div>
                         <p class="themeDescription">Dark</p>
                     </div>
                     <div class="themeOption">
-                        <div class="themeExample light"></div>
+                        <div class="themeExample light" id="themeLight"></div>
                         <p class="themeDescription">Light</p>
                     </div>
                 </div>
@@ -64,9 +64,10 @@
                 </div>
             </div>
             <div class="submitC">
-                <button type="submit" class="btn btn-link">SUBMIT</button>
+                <button type="button" class="btn btn-link" onclick="createUser();">SUBMIT</button>
             </div>
         </form>
+        <div><h3>PLAY WITHOUT PROFILE</h3></div>
     </div>
     <div class="homeBottom">
         <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
@@ -89,6 +90,11 @@
         <hr>
         <div class="container profileLisItem">
             <h3 class="col-9">Margarita Farrera</h3>
+            <button type="button" class="col-3 btn btn-link" onclick="board.reset()">PLAY</button>
+        </div>
+        <hr>
+        <div class="container profileLisItem">
+            <h3 class="col-9">Pepe Quintana</h3>
             <button type="button" class="col-3 btn btn-link" onclick="board.reset()">PLAY</button>
         </div>
         <hr>
@@ -119,7 +125,20 @@
         <hr>
         <div class="userDisplay">
             <div class="offset-1 nameScore">
-                <h2>2. Margarita Farrera</h2>
+
+                <h2>2. Pepe Quintana</h2>
+            </div>
+            <div class=" movTimScore">
+                <img src="img/movements.svg" class="movementImg" alt="">
+                <h3>999</h3>
+                <img src="img/timmer.svg" class="timmerImg" alt="">
+                <h3>99:99</h3>
+            </div>
+        </div>
+        <hr>
+        <div class="userDisplay">
+            <div class="offset-1 nameScore">
+                <h2>3. Margarita Farrera</h2>
             </div>
             <div class=" movTimScore">
                 <img src="img/movements.svg" class="movementImg" alt="">
@@ -131,7 +150,7 @@
         <hr>
         <div class="userDisplay">
             <div class="offset-1 nameScore">
-                <h2>3. Joe Doe</h2>
+                <h2>4. Joe Doe</h2>
             </div>
             <div class=" movTimScore">
                 <img src="img/movements.svg" class="movementImg" alt="">
