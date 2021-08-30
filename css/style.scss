@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorbase: #222831;
+    --colorPrima: #393E46;
+    --colorSecun: #EEEEEE;
+    /**/
+    --colorbase: #763857;
+    --colorPrima: #F4F9F9;
+    --colorSecun: #F7F6E7;
+    /**/
+    --colorbase: #2e3154;
+    --colorPrima: #57406b;
+    --colorSecun: #e076a5;
+    /**/
+    --colorbase: #52734D;
+    --colorPrima: #91C788;
+    --colorSecun: #DDFFBC;
+    --colorThird: #EEEEEE;
+}
+
+body {
+    background-color: var(--colorbase);
+    max-width: 360px;
+    max-height: 640px;
+}
+
+
+
+header {
+    height: 20vh;
+    font-family: 'Fredoka One', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.8em;
+    color: var(--colorSecun);
+
+    .option {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            color: var(--colorThird);
+            font-size: 2.2em;
+        }
+
+        .optionImg {
+            padding-top: 0%;
+            transform: scale(0.6);
+            opacity: 0.5;
+        }
+
+    }
+
+    .scoreHeader {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        align-items: center;
+
+        .scoreHeaderItem {
+            padding-top: 4%;
+            text-align: end;
+
+            .movement {
+                color: var(--colorSecun);
+                font-size: 1.8rem;
+                font-weight: bold;
+                font-family: 'Exo 2', sans-serif;
+            }
+
+            .time {
+                color: var(--colorSecun);
+                font-weight: bold;
+                font-size: 1.8 rem;
+                font-family: 'Exo 2', sans-serif;
+            }
+        }
+
+        .btn-link {
+            text-decoration: none;
+            color: var(--colorPrima);
+            font-size: 1.4rem;
+            font-weight: bold;
+            font-family: 'Exo 2', sans-serif;
+            letter-spacing: 0.1rem;
+        }
+
+        .btn-link:hover {
+            text-decoration: none;
+            border: none;
+            color: inherit;
+        }
+
+    }
+}
+
+.tablero {
+    height: 50vh;
+
+    .row_group_container {
+        display: flex;
+        flex-wrap: nowrap;
+        height: 25%;
+    }
+
+    .target {
+        color: #303030;
+        width: 24.75%;
+        text-align: center;
+        align-items: center;
+        font-family: monospace;
+        font-size: 2.4em;
+        border-radius: 0.2em;
+    }
+
+    .active {
+        background-color: var(--colorPrima);
+        border: var(--colorbase) solid 2px;
+        opacity: 0.6;
+        color: azure;
+        font-weight: bolder;
+    }
+
+    .nonActive {
+        background-color: var(--colorSecun);
+        border: var(--colorbase) solid 2px;
+        opacity: 0.8;
+        font-weight: bolder;
+    }
+
+    .margLeft {
+        margin-left: 1%;
+    }
+
+    .margTop {
+        margin-top: 1%;
+    }
+}
+.score {
+    height: 12vh;
+}
+
+footer {
+    height: 12vh;
+}
+@import "home";
+@import "globalScore";

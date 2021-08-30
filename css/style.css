@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --colorbase: #222831;
+  --colorPrima: #393E46;
+  --colorSecun: #EEEEEE;
+  /**/
+  --colorbase: #763857;
+  --colorPrima: #F4F9F9;
+  --colorSecun: #F7F6E7;
+  /**/
+  --colorbase: #2e3154;
+  --colorPrima: #57406b;
+  --colorSecun: #e076a5;
+  /**/
+  --colorbase: #52734D;
+  --colorPrima: #91C788;
+  --colorSecun: #DDFFBC;
+  --colorThird: #EEEEEE;
+}
+
+body {
+  background-color: var(--colorbase);
+  max-width: 360px;
+  max-height: 640px;
+}
+
+header {
+  height: 20vh;
+  font-family: 'Fredoka One', cursive;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 1.8em;
+  color: var(--colorSecun);
+}
+
+header .option {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .option h1 {
+  color: var(--colorThird);
+  font-size: 2.2em;
+}
+
+header .option .optionImg {
+  padding-top: 0%;
+  -webkit-transform: scale(0.6);
+          transform: scale(0.6);
+  opacity: 0.5;
+}
+
+header .scoreHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  align-items: center;
+}
+
+header .scoreHeader .scoreHeaderItem {
+  padding-top: 4%;
+  text-align: end;
+}
+
+header .scoreHeader .scoreHeaderItem .movement {
+  color: var(--colorSecun);
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: 'Exo 2', sans-serif;
+}
+
+header .scoreHeader .scoreHeaderItem .time {
+  color: var(--colorSecun);
+  font-weight: bold;
+  font-size: 1.8 rem;
+  font-family: 'Exo 2', sans-serif;
+}
+
+header .scoreHeader .btn-link {
+  text-decoration: none;
+  color: var(--colorPrima);
+  font-size: 1.4rem;
+  font-weight: bold;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+header .scoreHeader .btn-link:hover {
+  text-decoration: none;
+  border: none;
+  color: inherit;
+}
+
+.tablero {
+  height: 50vh;
+}
+
+.tablero .row_group_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  height: 25%;
+}
+
+.tablero .target {
+  color: #303030;
+  width: 24.75%;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: monospace;
+  font-size: 2.4em;
+  border-radius: 0.2em;
+}
+
+.tablero .active {
+  background-color: var(--colorPrima);
+  border: var(--colorbase) solid 2px;
+  opacity: 0.6;
+  color: azure;
+  font-weight: bolder;
+}
+
+.tablero .nonActive {
+  background-color: var(--colorSecun);
+  border: var(--colorbase) solid 2px;
+  opacity: 0.8;
+  font-weight: bolder;
+}
+
+.tablero .margLeft {
+  margin-left: 1%;
+}
+
+.tablero .margTop {
+  margin-top: 1%;
+}
+
+.score {
+  height: 12vh;
+}
+
+footer {
+  height: 12vh;
+}
+
+.homeTop {
+  height: 10vh;
+}
+
+.homeTop .homeTop__Img {
+  padding-top: 2%;
+  padding-right: 5%;
+  width: 18%;
+  float: right;
+}
+
+.homeMiddle {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homeMiddle h1 {
+  font-size: 4em;
+  font-family: 'Fredoka One', cursive;
+  color: var(--colorThird);
+}
+
+.homeMiddle ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.homeMiddle li {
+  list-style: none;
+}
+
+.homeMiddle a {
+  text-decoration: none;
+  color: var(--colorThird);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2em;
+}
+
+.homeBottom {
+  height: 10vh;
+}
+
+.homeBottom .homeBottom__Img {
+  width: 15%;
+  padding-left: 5%;
+}
+
+.homeTop {
+  height: 10vh;
+}
+
+.homeTop .homeTop__Img {
+  padding-top: 2%;
+  padding-right: 5%;
+  width: 18%;
+  float: right;
+}
+
+.scoreMiddle {
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scoreMiddle h1 {
+  font-size: 4em;
+  font-family: 'Fredoka One', cursive;
+  color: var(--colorThird);
+}
+
+.scoreMiddle ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scoreMiddle li {
+  list-style: none;
+}
+
+.scoreMiddle a {
+  text-decoration: none;
+  color: var(--colorThird);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.2em;
+}
+
+.homeBottom {
+  height: 10vh;
+}
+
+.homeBottom .homeBottom__Img {
+  width: 15%;
+  padding-left: 5%;
+}
+/*# sourceMappingURL=style.css.map */

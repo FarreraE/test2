@@ -61,7 +61,7 @@ class Board {
     BOARD_MANAGER PARA GENERAR UNO NUEVO */
 
     reset() {
-    
+
         aCard.reset();
         bCard.reset();
         cCard.reset();
@@ -352,7 +352,7 @@ function validateRow(cardAux, random) {
     }
 }
 
-// ----- GET RANDOM -----
+/* FUNCION QUE RETORNA UN VALOR RANDOM A ASIGNAR EN EL TRABLERO*/
 function getRandom() {
     randomCount++;
     let random = Math.round(Math.random() * 200 + 1);
@@ -375,6 +375,9 @@ function getRandom() {
     }
     return validarRandom(random);
 }
+/* RECORRE UN VECTOR CON LOS VALORES QUE SE HAN ASIGNADO AL GRID
+PARA EVITAR DUPLICAR VALORES, SI EL VALOR YA SE ENCUENTRA EN EL VECTOR
+SOLICITA OTRO A LA FUNCIÓN GET RANDOM*/
 function validarRandom(random) {
 
     for (let i = 0; i < 4; i++) {
@@ -386,10 +389,30 @@ function validarRandom(random) {
     assingnVector(random);
     return random;
 }
-
+/* SI PASA LAS VALIDACIONES ASIGNA EL VALOR EN EL VECTOR*/
 function assingnVector(random) {
-        randomVector[random - 1] = random;
+    randomVector[random - 1] = random;
 }
-
+// CLASE JUGAR
 
 // CLASE JUGADOR 
+class Player {
+    constructor(playerName, scoreOne, scoreTwo, scoreThree) {
+        this.playerName = playerName;
+        this.scorePlayer[0] = scoreOne;
+        this.scorePlayer[1] = scoreTwo;
+        this.scorePlayer[2] = scoreThree;
+    }
+}
+class Score {
+    constructor(countMovements, timeScore) {
+        this.countMovements = countMovements;
+        this.timeScore = timeScore;
+    }
+}
+
+// GLOBAL MEMORY
+
+function onCardClicked(e) {
+    console.log(target.className);
+}

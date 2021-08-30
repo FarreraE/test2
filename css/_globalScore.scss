@@ -1,0 +1,49 @@
+.homeTop {
+    height: 10vh;
+
+    .homeTop__Img {
+        padding-top: 2%;
+        padding-right: 5%;
+        width: 18%;
+        float: right;
+    }
+}
+
+.scoreMiddle {
+    height: 80vh;
+    //background-color: tomato;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-size: 4em;
+        font-family: 'Fredoka One', cursive;
+        color: var(--colorThird);
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    li{
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+        color: var(--colorThird);
+        font-family: 'Exo 2', sans-serif;
+        font-size: 1.2em;
+    }
+}
+
+.homeBottom {
+    height: 10vh;
+
+    .homeBottom__Img {
+        width: 15%;
+        padding-left: 5%;
+    }
+}

@@ -8,7 +8,7 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,8 +20,51 @@
 </head>
 
 <body>
-    <header>
+    <div class="homeTop">
+        <img src="img/settings.svg" class="homeTop__Img" alt="settings">
+    </div>
+    <div class="scoreMiddle">
+        <div class="userDisplay">
+            <div class="row">
+                <div class="col-2">1</div>
+                <div class="col-9">
+                        <div class="row">
+                            <div class="col-6">img</div>
+                            <div class="col-6">123</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-6">img</div>
+                            <div class="col-6">456</div>
+                        </div>
+                </div>
+            </div>
+            <div class="row">
+                ELY FARRERA
+            </div>
+        </div>
+    </div>
+    <div class="homeBottom">
+        <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
+    </div>
 
+
+
+    <div class="homeTop">
+        <img src="img/settings.svg" class="homeTop__Img" alt="settings">
+    </div>
+    <div class="scoreMiddle">
+        <h1>PUZKU</h1>
+        <ul>
+            <li><a href="">NEW GAME</a></li>
+            <li><a href="">GLOBAL SCORE</a></li>
+            <li><a href="">PROFILES</a></li>
+        </ul>
+    </div>
+    <div class="homeBottom">
+        <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
+    </div>
+
+       <header>
         <div class="row option">
             <div class="col-8">
                 <h1>PUZKU</h1>
@@ -57,11 +100,11 @@
                 <div class="row row_group_container">
                     <button class=" col-2 target nonActive " id="eCard"></button>
                     <button class=" col-2 target nonActive " id="fCard"></button>
-                    <button class=" col-2 target active margLeft" id="gCard"></button>
+                    <button class=" col-2 target nonActive margLeft" id="gCard"></button>
                     <button class=" col-2 target nonActive " id="hCard"></button>
                 </div>
                 <div class="row row_group_container">
-                    <button class=" col-2 target active margTop" id="iCard"></button>
+                    <button class=" col-2 target nonActive margTop" id="iCard"></button>
                     <button class=" col-2 target nonActive margTop" id="jCard"></button>
                     <button class=" col-2 target nonActive margLeft margTop" id="kCard"></button>
                     <button class=" col-2 target nonActive margTop" id="lCard"></button>
@@ -69,7 +112,7 @@
                 <div class="row row_group_container ">
                     <button class=" col-2 target nonActive" id="mCard"></button>
                     <button class=" col-2 target nonActive" id="nCard"></button>
-                    <button class=" col-2 target active margLeft" id="oCard"></button>
+                    <button class=" col-2 target nonActive margLeft" id="oCard"></button>
                     <button class=" col-2 target nonActive " id="pCard"></button>
                 </div>
             </div>
@@ -79,8 +122,9 @@
 
     </div>
     <footer>
-
+        HASTA AQUI
     </footer>
+
     <!-- FILA MASTER-->
 
     <!-- GRID 9X9 END -->
