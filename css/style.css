@@ -194,77 +194,7 @@ footer {
 .homeTop .homeTop__Img {
   padding-top: 2%;
   padding-right: 5%;
-  width: 18%;
-  float: right;
-}
-
-.homeMiddle {
-  height: 80vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.homeMiddle h1 {
-  font-size: 4em;
-  font-family: 'Fredoka One', cursive;
-  color: var(--colorThird);
-}
-
-.homeMiddle ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.homeMiddle li {
-  list-style: none;
-}
-
-.homeMiddle a {
-  text-decoration: none;
-  color: var(--colorThird);
-  font-family: 'Exo 2', sans-serif;
-  font-size: 1.2em;
-}
-
-.homeBottom {
-  height: 10vh;
-}
-
-.homeBottom .homeBottom__Img {
-  width: 15%;
-  padding-left: 5%;
-}
-
-.homeTop {
-  height: 10vh;
-}
-
-.homeTop .homeTop__Img {
-  padding-top: 2%;
-  padding-right: 5%;
-  width: 18%;
+  width: 14%;
   float: right;
 }
 
@@ -292,6 +222,7 @@ footer {
 }
 
 .scoreMiddle ul {
+  padding-left: 2%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -307,11 +238,8 @@ footer {
           align-items: center;
 }
 
-.scoreMiddle li {
+.scoreMiddle ul li {
   list-style: none;
-}
-
-.scoreMiddle a {
   text-decoration: none;
   color: var(--colorThird);
   font-family: 'Exo 2', sans-serif;
@@ -325,5 +253,65 @@ footer {
 .homeBottom .homeBottom__Img {
   width: 15%;
   padding-left: 5%;
+}
+
+.scoreMiddle .crownImg {
+  width: 40%;
+}
+
+.scoreMiddle .userDisplay {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.scoreMiddle .userDisplay h2 {
+  color: var(--colorThird);
+  font-family: "Exo 2", sans-serif;
+  font-weight: bold;
+  margin-left: 12%;
+}
+
+.scoreMiddle .userDisplay .nameScore {
+  text-align: left;
+}
+
+.scoreMiddle .userDisplay .movTimScore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scoreMiddle .userDisplay .movTimScore h3 {
+  color: var(--colorThird);
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+  font-size: 2em;
+  padding-top: 2%;
+}
+
+.scoreMiddle .userDisplay .movTimScore .timmerImg {
+  width: 12%;
+}
+
+.scoreMiddle .userDisplay .movTimScore .movementImg {
+  width: 10%;
 }
 /*# sourceMappingURL=style.css.map */

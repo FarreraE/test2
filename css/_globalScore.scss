@@ -1,49 +1,48 @@
-.homeTop {
-    height: 10vh;
-
-    .homeTop__Img {
-        padding-top: 2%;
-        padding-right: 5%;
-        width: 18%;
-        float: right;
-    }
-}
-
 .scoreMiddle {
-    height: 80vh;
-    //background-color: tomato;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    h1 {
-        font-size: 4em;
-        font-family: 'Fredoka One', cursive;
-        color: var(--colorThird);
+    
+    .crownImg {
+        width: 40%;
     }
-    ul{
+
+    .userDisplay {
+        //background-color: pink;
+        margin-top: 5%;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-    }
-    li{
-        list-style: none;
-    }
-    a {
-        text-decoration: none;
-        color: var(--colorThird);
-        font-family: 'Exo 2', sans-serif;
-        font-size: 1.2em;
-    }
-}
+        h2 {
+            color: var(--colorThird);
+            font-family: 'Exo 2', sans-+serif;
+            font-weight: bold;
+            margin-left: 12%;
+        }
 
-.homeBottom {
-    height: 10vh;
+        .nameScore {
+            text-align: left;
+        }
 
-    .homeBottom__Img {
-        width: 15%;
-        padding-left: 5%;
+        .movTimScore {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            h3 {
+                color: var(--colorThird);
+                font-family: 'Exo 2', sans-serif;
+                font-weight: bold;
+                font-size: 2em;
+                padding-top: 2%;
+            }
+
+            .timmerImg {
+                width: 12%;
+            }
+
+            .movementImg {
+                width: 10%;
+
+            }
+        }
     }
 }
