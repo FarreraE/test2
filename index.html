@@ -21,6 +21,57 @@
 
 <body>
     <div class="homeTop">
+
+    </div>
+    <div class="offset-1 col-10 newProfileMiddle">
+        <h2>NEW PROFILE</h2>
+
+        <form>
+            <div class="mb-3">
+                <label for="username" class="form-label">User name</label>
+                <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">8 Characters Maximum</div>
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">Theme</label>
+                <div class="themes">
+                    <div class="themeOption">
+                        <div class="themeExample green active"></div>
+                        <p class="themeDescription">Green</p>
+                    </div>
+                    <div class="themeOption">
+                        <div class="themeExample purple"></div>
+                        <p class="themeDescription">Purple</p>
+                    </div>
+                    <div class="themeOption">
+                        <div class="themeExample dark"></div>
+                        <p class="themeDescription">Dark</p>
+                    </div>
+                    <div class="themeOption">
+                        <div class="themeExample light"></div>
+                        <p class="themeDescription">Light</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3 sound">
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Music</label>
+                </div>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Sound</label>
+                </div>
+            </div>
+            <div class="submitC">
+                <button type="submit" class="btn btn-link">SUBMIT</button>
+            </div>
+        </form>
+    </div>
+    <div class="homeBottom">
+        <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
+    </div>
+    <div class="homeTop">
         <img src="img/settings.svg" class="homeTop__Img" alt="settings">
     </div>
     <div class="offset-1 col-10 profileMiddle">
@@ -41,6 +92,7 @@
             <button type="button" class="col-3 btn btn-link" onclick="board.reset()">PLAY</button>
         </div>
         <hr>
+        <button type="button" class="btn btn-linka text-right" onclick="board.reset()">New Profile</button>
     </div>
     <div class="homeBottom">
         <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
@@ -51,8 +103,8 @@
     </div>
     <div class="offset-1 col-10 scoreMiddle">
         <img src="img/crown.svg" class="crownImg" alt="">
+        <hr>
         <div class="userDisplay">
-            <hr>
             <div class="offset-1 nameScore">
 
                 <h2>1. Ely Farrera</h2>
@@ -64,8 +116,8 @@
                 <h3>99:99</h3>
             </div>
         </div>
+        <hr>
         <div class="userDisplay">
-            <hr>
             <div class="offset-1 nameScore">
                 <h2>2. Margarita Farrera</h2>
             </div>
@@ -76,8 +128,8 @@
                 <h3>23:12</h3>
             </div>
         </div>
+        <hr>
         <div class="userDisplay">
-            <hr>
             <div class="offset-1 nameScore">
                 <h2>3. Joe Doe</h2>
             </div>
@@ -88,6 +140,7 @@
                 <h3>02:50</h3>
             </div>
         </div>
+        <hr>
     </div>
     <div class="homeBottom">
         <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
@@ -102,7 +155,7 @@
         <h1>PUZKU</h1>
         <ul class="text-center">
             <li>NEW GAME</li>
-            <li>GLOBAL SCORE</li>
+            <li>RANKING</li>
             <li>PROFILES</li>
         </ul>
     </div>

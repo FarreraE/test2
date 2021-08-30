@@ -158,7 +158,7 @@ class Card {
 // INICIA EL TABLERO
 const board = new Board(0);
 // VARIABLES GLOBLALES PARA COMPROBAR LA ASIGNACIÓN CORRECTA
-let randomVector = [0, 0, 0, 0];
+ randomVector = [0, 0, 0, 0];
 let randomCount = 0;
 
 // INICIA LAS CARTAS
@@ -397,11 +397,11 @@ function assingnVector(random) {
 
 // CLASE JUGADOR 
 class Player {
-    constructor(playerName, scoreOne, scoreTwo, scoreThree) {
+    constructor(playerName, playerID,playerScore,playerSettings) {
         this.playerName = playerName;
-        this.scorePlayer[0] = scoreOne;
-        this.scorePlayer[1] = scoreTwo;
-        this.scorePlayer[2] = scoreThree;
+        this.playerID = playerID;
+        this.playerScore = playerScore;
+        this.playerSettings = playerSettings;
     }
 }
 class Score {
@@ -410,9 +410,15 @@ class Score {
         this.timeScore = timeScore;
     }
 }
+class Settings {
+    constructor(theme, sound) {
+        this.theme = theme;
+        this.sound = sound;
+    }
+}
+
+let playerList = new Player(); 
+
 
 // GLOBAL MEMORY
 
-function onCardClicked(e) {
-    console.log(target.className);
-}

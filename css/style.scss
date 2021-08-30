@@ -150,12 +150,14 @@ header {
     }
 }
 .score {
-    height: 12vh;
+    height: 10vh;
 }
 
 footer {
-    height: 12vh;
+    height: 20vh;
 }
 @import "home";
 @import "globalScore";
-@import "profiles";
+@import "profileList";
+@import "newProfile";
+

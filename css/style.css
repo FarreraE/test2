@@ -180,11 +180,11 @@ header .scoreHeader .btn-link:hover {
 }
 
 .score {
-  height: 12vh;
+  height: 10vh;
 }
 
 footer {
-  height: 12vh;
+  height: 20vh;
 }
 
 .homeTop {
@@ -276,7 +276,7 @@ footer {
   width: 40%;
 }
 
-.scoreMiddle .userDisplay hr {
+.scoreMiddle hr {
   size: 50px;
   width: 100%;
   color: var(--colorThird);
@@ -341,6 +341,7 @@ footer {
   height: 80vh;
   font-family: 'Fredoka One', cursive;
   color: var(--colorThird);
+  font-size: 1.4rem;
 }
 
 .profileMiddle .profileLisItem {
@@ -375,5 +376,124 @@ footer {
   size: 50px;
   width: 100%;
   color: var(--colorThird);
+}
+
+.profileMiddle .btn-linka {
+  text-decoration: none;
+  color: var(--colorPrima);
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  border: 0.1rem solid var(--colorSecun);
+  font-family: 'Exo 2', sans-serif;
+}
+
+.newProfileMiddle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  font-family: 'Fredoka One', cursive;
+  color: var(--colorSecun);
+  font-size: 1.4rem;
+}
+
+.newProfileMiddle form {
+  width: 100%;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.newProfileMiddle form .form-text {
+  color: var(--colorThird);
+}
+
+.newProfileMiddle form .themes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newProfileMiddle form .themes .themeOption .themeExample {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  border: 0.2rem solid var(--colorThird);
+}
+
+.newProfileMiddle form .themes .themeOption .green {
+  background: #52734d;
+  background: linear-gradient(220deg, #52734d 0%, #91c788 50%, #ddffbc 80%, #eeeeee 90%);
+}
+
+.newProfileMiddle form .themes .themeOption .purple {
+  background: #170129;
+  background: linear-gradient(220deg, #170129 0%, #6a00c6 50%, #57406b 80%, #f0f0f0 90%);
+}
+
+.newProfileMiddle form .themes .themeOption .dark {
+  background: black;
+  background: linear-gradient(220deg, black 0%, #222831 50%, #222831 80%, #eeeeee 90%);
+}
+
+.newProfileMiddle form .themes .themeOption .light {
+  background: #b5b5b5;
+  background: linear-gradient(220deg, #b5b5b5 0%, #faffe0 11%, #faffe0 66%, #ededed 94%);
+}
+
+.newProfileMiddle form .themes .themeOption .active {
+  border: 0.2rem solid yellow;
+}
+
+.newProfileMiddle form .themes .themeOption .themeDescription {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.newProfileMiddle form .sound {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newProfileMiddle form .submitC {
+  margin-top: 5%;
+  float: right;
+}
+
+.newProfileMiddle .btn-link {
+  text-decoration: none;
+  color: var(--colorPrima);
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  border: 0.1rem solid var(--colorSecun);
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

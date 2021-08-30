@@ -1,0 +1,84 @@
+.newProfileMiddle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80vh;
+    font-family: 'Fredoka One', cursive;
+    color: var(--colorSecun);
+    font-size: 1.4rem;
+
+    form {
+        width: 100%;
+        font-family: 'Exo 2', sans-serif;
+        .form-text{
+            color: var(--colorThird);
+        }
+        .themes {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            .themeOption {
+                .themeExample {
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 3rem;
+                    border: 0.2rem solid var(--colorThird);
+                }
+
+                .green {
+                    background: rgb(82, 115, 77);
+                    background: linear-gradient(220deg, rgba(82, 115, 77, 1) 0%, rgba(145, 199, 136, 1) 50%, rgba(221, 255, 188, 1) 80%, rgba(238, 238, 238, 1) 90%);
+                }
+
+                .purple {
+                    background: rgb(23, 1, 41);
+                    background: linear-gradient(220deg, rgba(23, 1, 41, 1) 0%, rgba(106, 0, 198, 1) 50%, rgba(87, 64, 107, 1) 80%, rgba(240, 240, 240, 1) 90%);
+                }
+
+                .dark {
+                    background: rgb(0, 0, 0);
+                    background: linear-gradient(220deg, rgba(0, 0, 0, 1) 0%, rgba(34, 40, 49, 1) 50%, rgba(34, 40, 49, 1) 80%, rgba(238, 238, 238, 1) 90%);
+                }
+
+                .light {
+                    background: rgb(181, 181, 181);
+                    background: linear-gradient(220deg, rgba(181, 181, 181, 1) 0%, rgba(250, 255, 224, 1) 11%, rgba(250, 255, 224, 1) 66%, rgba(237, 237, 237, 1) 94%);
+                }
+
+                .active {
+                    border: 0.2rem solid yellow;
+                }
+
+                .themeDescription {
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        .sound {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .submitC {
+            margin-top: 5%;
+            float: right;
+        }
+    }
+
+    .btn-link {
+        text-decoration: none;
+        color: var(--colorPrima);
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        border: 0.1rem solid var(--colorSecun);
+        font-weight: bold;
+    }
+
+}

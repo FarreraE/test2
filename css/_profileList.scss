@@ -6,6 +6,7 @@
     height: 80vh;
     font-family: 'Fredoka One', cursive;
     color: var(--colorThird);
+    font-size: 1.4rem;
 
     .profileLisItem {
         display: flex;
@@ -32,6 +33,15 @@
         size: 50px;
         width: 100%;
         color: var(--colorThird);
+    }
+    .btn-linka {
+        text-decoration: none;
+        color: var(--colorPrima);
+        font-size: 1.2rem;
+        font-weight: bold;
+        letter-spacing: 0.1rem;
+        border: 0.1rem solid var(--colorSecun);
+        font-family: 'Exo 2', sans-serif;
     }
 
 }
