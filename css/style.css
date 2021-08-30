@@ -198,7 +198,7 @@ footer {
   float: right;
 }
 
-.scoreMiddle {
+.homeMiddle {
   height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,14 +215,14 @@ footer {
           justify-content: center;
 }
 
-.scoreMiddle h1 {
+.homeMiddle h1 {
   font-size: 4em;
   font-family: 'Fredoka One', cursive;
   color: var(--colorThird);
 }
 
-.scoreMiddle ul {
-  padding-left: 2%;
+.homeMiddle ul {
+  padding-left: 4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -238,7 +238,7 @@ footer {
           align-items: center;
 }
 
-.scoreMiddle ul li {
+.homeMiddle ul li {
   list-style: none;
   text-decoration: none;
   color: var(--colorThird);
@@ -269,14 +269,17 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 80vh;
 }
 
 .scoreMiddle .crownImg {
   width: 40%;
 }
 
-.scoreMiddle .userDisplay {
-  margin-bottom: 5%;
+.scoreMiddle .userDisplay hr {
+  size: 50px;
+  width: 100%;
+  color: var(--colorThird);
 }
 
 .scoreMiddle .userDisplay .nameScore {
@@ -287,7 +290,7 @@ footer {
   color: var(--colorThird);
   font-family: "Exo 2", sans-serif;
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 1.4em;
 }
 
 .scoreMiddle .userDisplay .movTimScore {
@@ -309,7 +312,7 @@ footer {
   color: var(--colorThird);
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 1.2em;
   padding-top: 2%;
 }
 
@@ -319,5 +322,58 @@ footer {
 
 .scoreMiddle .userDisplay .movTimScore .movementImg {
   width: 10%;
+}
+
+.profileMiddle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  font-family: 'Fredoka One', cursive;
+  color: var(--colorThird);
+}
+
+.profileMiddle .profileLisItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.profileMiddle .profileLisItem h3 {
+  padding-top: 2%;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.profileMiddle .profileLisItem .btn-link {
+  text-decoration: none;
+  color: var(--colorPrima);
+  font-size: 1.4rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+}
+
+.profileMiddle hr {
+  size: 50px;
+  width: 100%;
+  color: var(--colorThird);
 }
 /*# sourceMappingURL=style.css.map */
