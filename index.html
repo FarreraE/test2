@@ -19,230 +19,249 @@
     <title>Document</title>
 </head>
 
-<body>
-    <div class="homeTop">
-
+<body id="body">
+    <!-- HOME -->
+    <div class="containers" id="homeScreen">
+        <div class="homeTop">
+            <img src="img/settings.svg" class="homeTop__Img" alt="settings">
+        </div>
+        <div class="homeMiddle">
+            <h1>PUZKU</h1>
+            <ul class="text-center">
+                <li id="newGame">NEW GAME</li>
+                <li id="ranking">RANKING</li>
+                <li id="profiles">PROFILES</li>
+            </ul>
+        </div>
+        <div class="homeBottom">
+            <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
+        </div>
     </div>
-    <div class="offset-1 col-10 newProfileMiddle">
-        <h2>NEW PROFILE</h2>
+    <!-- NEW PROFILE -->
+    <div class="container-fluid" id="newProfileScreen">
+        <div class="homeTop">
 
-        <form>
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">8 Characters Maximum</div>
-            </div>
-            <div class="mb-3">
-                <label for="username" class="form-label" >Theme</label>
-                <div class="themes">
-                    <div class="themeOption">
-                        <div class="themeExample green activeTheme" id="themeGreen"></div>
-                        <p class="themeDescription">Green</p>
+        </div>
+        <div class="offset-1 col-10 newProfileMiddle">
+            <h2>NEW PROFILE</h2>
+
+            <form>
+                <div class="mb-3">
+                    <label for="playerName" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="playerName" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">8 Characters Maximum</div>
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">Theme</label>
+                    <div class="themes">
+                        <div class="themeOption">
+                            <div class="themeExample green activeTheme" id="themeGreen"></div>
+                            <p class="themeDescription">Green</p>
+                        </div>
+                        <div class="themeOption">
+                            <div class="themeExample purple" id="themePurple"></div>
+                            <p class="themeDescription">Purple</p>
+                        </div>
+                        <div class="themeOption">
+                            <div class="themeExample dark" id="themeDark"></div>
+                            <p class="themeDescription">Dark</p>
+                        </div>
+                        <div class="themeOption">
+                            <div class="themeExample light" id="themeLight"></div>
+                            <p class="themeDescription">Light</p>
+                        </div>
                     </div>
-                    <div class="themeOption">
-                        <div class="themeExample purple" id="themePurple"></div>
-                        <p class="themeDescription">Purple</p>
+                </div>
+                <div class="mb-3 sound">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="music">
+                        <label class="form-check-label" for="music">Music</label>
                     </div>
-                    <div class="themeOption">
-                        <div class="themeExample dark" id="themeDark"></div>
-                        <p class="themeDescription">Dark</p>
-                    </div>
-                    <div class="themeOption">
-                        <div class="themeExample light" id="themeLight"></div>
-                        <p class="themeDescription">Light</p>
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="sound">
+                        <label class="form-check-label" for="sound">sound</label>
                     </div>
                 </div>
-            </div>
-            <div class="mb-3 sound">
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="music">
-                    <label class="form-check-label" for="music">Music</label>
+                <div class="submitC">
+                    <button type="button" class="btn btn-link" onclick="createUser();"
+                        id="submitNewProfile">SUBMIT</button>
                 </div>
-                <div class="form-check form-switch">
-                    <input class="form-check-input" type="checkbox" id="sound">
-                    <label class="form-check-label" for="sound">Sound</label>
+            </form>
+            <div>
+                <h3 id="playNoProfile">PLAY WITHOUT PROFILE</h3>
+            </div>
+        </div>
+
+        <div class="homeBottom">
+            <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
+            <button type="button" class="btn back" id="goBack2">GO BACK</button>
+        </div>
+    </div>
+    <!-- PROFILES -->
+    <div class="container-fluid" id="profileScreen">
+        <div class="homeTop">
+            <img src="img/settings.svg" class="homeTop__Img" alt="settings">
+        </div>
+        <div class="offset-1 col-10 profileMiddle">
+            <h2>PROFILES</h2>
+            <hr>
+            <div class="container profileLisItem">
+                <h3 class="col-9" id ="player0">Ely Farrera</h3>
+                <button type="button" class="col-3 btn btn-link" onclick="screenController(2)">PLAY</button>
+            </div>
+            <hr>
+            <div class="container profileLisItem">
+                <h3 class="container col-9" id ="player1"></h3>
+                <button type="button" class="col-3 btn btn-link" onclick="screenController(2)">PLAY</button>
+            </div>
+            <hr>
+            <div class="container profileLisItem">
+                <h3 class="col-9" id ="player2"></h3>
+                <button type="button" class="col-3 btn btn-link" onclick="screenController(2)">PLAY</button>
+            </div>
+            <hr>
+            <div class="container profileLisItem">
+                <h3 class="col-9" id ="player3"></h3>
+                <button type="button" class="col-3 btn btn-link" onclick="screenController(2)">PLAY</button>
+            </div>
+            <hr>
+            <button type="button" class="btn btn-linka text-right" id="profileNewProfile">New Profile</button>
+        </div>
+        <div class="homeBottom">
+            <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
+            <button type="button" class="btn back" id="goBack3">GO BACK</button>
+        </div>
+    </div>
+
+    <!-- RANKING -->
+    <div class="container-fluid" id="rankingScreen">
+        <div class="homeTop">
+            <img src="img/settings.svg" class="homeTop__Img" alt="settings">
+        </div>
+        <div class="offset-1 col-10 scoreMiddle">
+            <img src="img/crown.svg" class="crownImg" alt="">
+            <hr>
+            <div class="userDisplay">
+                <div class="offset-1 nameScore">
+
+                    <h2>1. Ely Farrera</h2>
+                </div>
+                <div class=" movTimScore">
+                    <img src="img/movements.svg" class="movementImg" alt="">
+                    <h3>999</h3>
+                    <img src="img/timmer.svg" class="timmerImg" alt="">
+                    <h3>99:99</h3>
                 </div>
             </div>
-            <div class="submitC">
-                <button type="button" class="btn btn-link" onclick="createUser();">SUBMIT</button>
-            </div>
-        </form>
-        <div><h3>PLAY WITHOUT PROFILE</h3></div>
-    </div>
-    <div class="homeBottom">
-        <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
-    </div>
-    <div class="homeTop">
-        <img src="img/settings.svg" class="homeTop__Img" alt="settings">
-    </div>
-    <div class="offset-1 col-10 profileMiddle">
-        <h2>PROFILES</h2>
-        <hr>
-        <div class="container profileLisItem">
-            <h3 class="col-9">Ely Farrera</h3>
-            <button type="button" class="col-3 btn btn-link" onclick="board.reset()">PLAY</button>
-        </div>
-        <hr>
-        <div class="container profileLisItem">
-            <h3 class="container col-9">John Doe</h3>
-            <button type="button" class="col-3 btn btn-link" onclick="board.reset()">PLAY</button>
-        </div>
-        <hr>
-        <div class="container profileLisItem">
-            <h3 class="col-9">Margarita Farrera</h3>
-            <button type="button" class="col-3 btn btn-link" onclick="board.reset()">PLAY</button>
-        </div>
-        <hr>
-        <div class="container profileLisItem">
-            <h3 class="col-9">Pepe Quintana</h3>
-            <button type="button" class="col-3 btn btn-link" onclick="board.reset()">PLAY</button>
-        </div>
-        <hr>
-        <button type="button" class="btn btn-linka text-right" onclick="board.reset()">New Profile</button>
-    </div>
-    <div class="homeBottom">
-        <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
-    </div>
+            <hr>
+            <div class="userDisplay">
+                <div class="offset-1 nameScore">
 
-    <div class="homeTop">
-        <img src="img/settings.svg" class="homeTop__Img" alt="settings">
-    </div>
-    <div class="offset-1 col-10 scoreMiddle">
-        <img src="img/crown.svg" class="crownImg" alt="">
-        <hr>
-        <div class="userDisplay">
-            <div class="offset-1 nameScore">
-
-                <h2>1. Ely Farrera</h2>
-            </div>
-            <div class=" movTimScore">
-                <img src="img/movements.svg" class="movementImg" alt="">
-                <h3>999</h3>
-                <img src="img/timmer.svg" class="timmerImg" alt="">
-                <h3>99:99</h3>
-            </div>
-        </div>
-        <hr>
-        <div class="userDisplay">
-            <div class="offset-1 nameScore">
-
-                <h2>2. Pepe Quintana</h2>
-            </div>
-            <div class=" movTimScore">
-                <img src="img/movements.svg" class="movementImg" alt="">
-                <h3>999</h3>
-                <img src="img/timmer.svg" class="timmerImg" alt="">
-                <h3>99:99</h3>
-            </div>
-        </div>
-        <hr>
-        <div class="userDisplay">
-            <div class="offset-1 nameScore">
-                <h2>3. Margarita Farrera</h2>
-            </div>
-            <div class=" movTimScore">
-                <img src="img/movements.svg" class="movementImg" alt="">
-                <h3>894</h3>
-                <img src="img/timmer.svg" class="timmerImg" alt="">
-                <h3>23:12</h3>
-            </div>
-        </div>
-        <hr>
-        <div class="userDisplay">
-            <div class="offset-1 nameScore">
-                <h2>4. Joe Doe</h2>
-            </div>
-            <div class=" movTimScore">
-                <img src="img/movements.svg" class="movementImg" alt="">
-                <h3>368</h3>
-                <img src="img/timmer.svg" class="timmerImg" alt="">
-                <h3>02:50</h3>
-            </div>
-        </div>
-        <hr>
-    </div>
-    <div class="homeBottom">
-        <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
-    </div>
-
-
-
-    <div class="homeTop">
-        <img src="img/settings.svg" class="homeTop__Img" alt="settings">
-    </div>
-    <div class="homeMiddle">
-        <h1>PUZKU</h1>
-        <ul class="text-center">
-            <li>NEW GAME</li>
-            <li>RANKING</li>
-            <li>PROFILES</li>
-        </ul>
-    </div>
-    <div class="homeBottom">
-        <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
-    </div>
-
-    <header>
-        <div class="row option">
-            <div class="col-8">
-                <h1>PUZKU</h1>
-            </div>
-            <div class="offset-1 col-3">
-                <img src="img/settings.svg" class=optionImg alt="settings">
-            </div>
-        </div>
-        <div class="container scoreHeader">
-            <div class="col-4 ">
-                <button type="button" class="btn btn-link" onclick="board.reset()">RESET</button>
-            </div>
-            <div class="col-4 scoreHeaderItem">
-                <h2 class="movement">999</h2>
-            </div>
-            <div class="col-4 scoreHeaderItem">
-                <h2 class="time">00:00</h2>
-            </div>
-
-
-        </div>
-
-    </header>
-    <div class="container">
-        <div class="col-12">
-            <div class="container tablero">
-                <div class="row row_group_container">
-                    <button class="col-2 target active" id="aCard" onclick="board_Manager()"></button>
-                    <button class="col-2 target nonActive " id="bCard"></button>
-                    <button class="col-2 target nonActive margLeft" id="cCard"></button>
-                    <button class="col-2 target nonActive " id="dCard"></button>
+                    <h2>2. Pepe Quintana</h2>
                 </div>
-                <div class="row row_group_container">
-                    <button class=" col-2 target nonActive " id="eCard"></button>
-                    <button class=" col-2 target nonActive " id="fCard"></button>
-                    <button class=" col-2 target nonActive margLeft" id="gCard"></button>
-                    <button class=" col-2 target nonActive " id="hCard"></button>
+                <div class=" movTimScore">
+                    <img src="img/movements.svg" class="movementImg" alt="">
+                    <h3>999</h3>
+                    <img src="img/timmer.svg" class="timmerImg" alt="">
+                    <h3>99:99</h3>
                 </div>
-                <div class="row row_group_container">
-                    <button class=" col-2 target nonActive margTop" id="iCard"></button>
-                    <button class=" col-2 target nonActive margTop" id="jCard"></button>
-                    <button class=" col-2 target nonActive margLeft margTop" id="kCard"></button>
-                    <button class=" col-2 target nonActive margTop" id="lCard"></button>
+            </div>
+            <hr>
+            <div class="userDisplay">
+                <div class="offset-1 nameScore">
+                    <h2>3. Margarita Farrera</h2>
                 </div>
-                <div class="row row_group_container ">
-                    <button class=" col-2 target nonActive" id="mCard"></button>
-                    <button class=" col-2 target nonActive" id="nCard"></button>
-                    <button class=" col-2 target nonActive margLeft" id="oCard"></button>
-                    <button class=" col-2 target nonActive " id="pCard"></button>
+                <div class=" movTimScore">
+                    <img src="img/movements.svg" class="movementImg" alt="">
+                    <h3>894</h3>
+                    <img src="img/timmer.svg" class="timmerImg" alt="">
+                    <h3>23:12</h3>
+                </div>
+            </div>
+            <hr>
+            <div class="userDisplay">
+                <div class="offset-1 nameScore">
+                    <h2>4. Joe Doe</h2>
+                </div>
+                <div class=" movTimScore">
+                    <img src="img/movements.svg" class="movementImg" alt="">
+                    <h3>368</h3>
+                    <img src="img/timmer.svg" class="timmerImg" alt="">
+                    <h3>02:50</h3>
+                </div>
+            </div>
+            <hr>
+        </div>
+        <div class="homeBottom">
+            <img src="img/e-logoCreama.svg" class="homeBottom__Img" alt="logo">
+            <button type="button" class="btn back" id="goBack4">GO BACK</button>
+        </div>
+    </div>
+
+    <!-- TABLERO -->
+    <div class="container-fluid" id="boardScreen">
+        <header>
+            <div class="row option">
+                <div class="col-8">
+                    <h1>PUZKU</h1>
+                </div>
+                <div class="offset-1 col-3">
+                    <img src="img/settings.svg" class=optionImg alt="settings">
+                </div>
+            </div>
+            <div class="container scoreHeader">
+                <div class="col-4 ">
+                    <button type="button" class="btn btn-link" onclick="board.reset()">RESET</button>
+                </div>
+                <div class="col-4 scoreHeaderItem">
+                    <h2 class="movement">000</h2>
+                </div>
+                <div class="col-4 scoreHeaderItem">
+                    <h2 class="time">00:00</h2>
+                </div>
+
+
+            </div>
+
+        </header>
+        <div class="container">
+            <div class="col-12">
+                <div class="container tablero">
+                    <div class="row row_group_container">
+                        <button class="col-2 target active" id="aCard" onclick=""></button>
+                        <button class="col-2 target nonActive " id="bCard"></button>
+                        <button class="col-2 target nonActive margLeft" id="cCard"></button>
+                        <button class="col-2 target nonActive " id="dCard"></button>
+                    </div>
+                    <div class="row row_group_container">
+                        <button class=" col-2 target nonActive " id="eCard"></button>
+                        <button class=" col-2 target nonActive " id="fCard"></button>
+                        <button class=" col-2 target nonActive margLeft" id="gCard"></button>
+                        <button class=" col-2 target nonActive " id="hCard"></button>
+                    </div>
+                    <div class="row row_group_container">
+                        <button class=" col-2 target nonActive margTop" id="iCard"></button>
+                        <button class=" col-2 target nonActive margTop" id="jCard"></button>
+                        <button class=" col-2 target nonActive margLeft margTop" id="kCard"></button>
+                        <button class=" col-2 target nonActive margTop" id="lCard"></button>
+                    </div>
+                    <div class="row row_group_container ">
+                        <button class=" col-2 target nonActive" id="mCard"></button>
+                        <button class=" col-2 target nonActive" id="nCard"></button>
+                        <button class=" col-2 target nonActive margLeft" id="oCard"></button>
+                        <button class=" col-2 target nonActive " id="pCard"></button>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="container score">
+
+        </div>
+        <footer>
+            <button type="button" class="btn back" id="goBack5">GO BACK</button>
+        </footer>
     </div>
-    <div class="container score">
-
-    </div>
-    <footer>
-
-    </footer>
-
     <!-- FILA MASTER-->
 
     <!-- GRID 9X9 END -->

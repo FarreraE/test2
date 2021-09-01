@@ -190,6 +190,18 @@ footer {
   height: 20vh;
 }
 
+.back {
+  font-weight: bold;
+  color: var(--colorSecun);
+  font-size: 1.2em;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.back:hover {
+  color: var(--colorSecun);
+  font-family: 'Exo 2', sans-serif;
+}
+
 .homeTop {
   height: 10vh;
 }
@@ -225,7 +237,7 @@ footer {
 }
 
 .homeMiddle ul {
-  padding-left: 4%;
+  padding-right: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -239,6 +251,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  letter-spacing: 0.1rem;
 }
 
 .homeMiddle ul li {
@@ -251,6 +264,16 @@ footer {
 
 .homeBottom {
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .homeBottom .homeBottom__Img {
@@ -438,7 +461,6 @@ footer {
 
 .newProfileMiddle form .themes .themeOption {
   width: 100%;
-  height: 5rem;
   padding-top: 2%;
 }
 
@@ -482,6 +504,7 @@ footer {
 }
 
 .newProfileMiddle form .sound {
+  margin-top: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -515,5 +538,6 @@ footer {
   font-family: 'Exo 2', sans-serif;
   text-decoration: underline;
   color: var(--colorThird);
+  font-size: 0.8em;
 }
 /*# sourceMappingURL=style.css.map */

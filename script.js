@@ -395,13 +395,15 @@ function assingnVector(random) {
     randomVector[random - 1] = random;
 }
 /*---------- END BOARD SECTION -----*/
-/*---------- PLAY SECTION -----*/
-// CLASE JUGAR
+//PENDIENTE:
+        /*---------- PLAY SECTION -----*/
+        // CLASE JUGAR
 
-/*---------- END PLAY SECTION -----*/
+        /*---------- END PLAY SECTION -----*/
 /*---------- PLAYER SECTION -----*/
 // CLASE JUGADOR 
 class Player {
+
     constructor(playerName, playerID, playerScore, playerSettings) {
         this.playerName = playerName;
         this.playerID = playerID;
@@ -419,7 +421,7 @@ class Settings {
     constructor(theme, music, sound) {
         this.theme = theme;
         this.music = music;
-        this.sound = sound; 
+        this.sound = sound;
     }
 }
 
@@ -481,10 +483,11 @@ function setTheme(Option) {
 
 }
 
+// CREA UN NUEVO USUARIO Y LO GUARDA EN EL LOCAL STORAGE
 function createUser() {
-    console.log("capturado");
+
     //CAPTURA EL USERNAME
-    const username = document.getElementById("username").value;
+    const username = document.getElementById("playerName").value;
     let playerScore = [2];
     playerScore[0] = new Score(0, 0);
     playerScore[1] = new Score(0, 0);
@@ -493,12 +496,115 @@ function createUser() {
     const music = document.getElementById("music").checked;
     const sound = document.getElementById("sound").checked;
 
-    let playerSettings = new Settings(themeOption, music,sound);
-    let newPlayer = new Player(username, 1, playerScore, playerSettings);
+    let playerSettings = new Settings(themeOption, music, sound);
+
+    newPlayer = new Player(username, 1, playerScore, playerSettings);
 
     playerList.push(newPlayer);
+    // CONVIERTE LA LISTA DE JUGADORES A JSON
+     listPlayerJSON = JSON.stringify(playerList);
+    // GUARDO LA LISTA EN FORMATO JSON
+    localStorage.setItem('playerListJSON', listPlayerJSON);
+    console.log("capturado");
+    
+    let listAux = localStorage.getItem('playerListJSON');
+    listAuxParse = JSON.parse(listAux);
+    
+    player1.innerHTML = listAuxParse[1].playerName;
+    
 }
 /*---------- END PLAYER SECTION -----*/
 
 // GLOBAL MEMORY
 
+let playerScore = new Score(100, 200);
+
+let playerSettings = new Settings(themeOption, true, false);
+
+newPlayerAux = new Player("Test", 1, playerScore, playerSettings);
+
+playerList.push(newPlayerAux);
+
+// GLOBAL MEMORY TEST
+
+const player0 = document.getElementById("player0");
+const player1 = document.getElementById("player1");
+const player2 = document.getElementById("player2");
+const player3 = document.getElementById("player3");
+
+player0.innerHTML = playerList[0].playerName;
+// SCREEN CONTROLLER 
+
+//HTML SCREEN SECTION
+const body = document.getElementById("body");
+const homeScreen = document.getElementById("homeScreen");
+const profileScreen = document.getElementById("profileScreen");
+const newProfileScreen = document.getElementById("newProfileScreen");
+const rankingScreen = document.getElementById("rankingScreen");
+const boardScreen = document.getElementById("boardScreen");
+
+
+homeScreen.style.display = "block";
+profileScreen.style.display = "none";
+newProfileScreen.style.display = "none";
+rankingScreen.style.display = "none";
+boardScreen.style.display = "none";
+
+//BTN
+// HOME BTN
+const newGame = document.getElementById("newGame");
+const ranking = document.getElementById("ranking");
+const profiles = document.getElementById("profiles");
+
+newGame.addEventListener("click", function () { screenController(1) });
+ranking.addEventListener("click", function () { screenController(3) });
+profiles.addEventListener("click", function () { screenController(4) });
+
+// NEW PROFILE BTN
+const submitNewProfile = document.getElementById("submitNewProfile");
+const profileNewProfile = document.getElementById("profileNewProfile");
+const playNoProfile = document.getElementById("playNoProfile");
+
+submitNewProfile.addEventListener("click", function () { screenController(2) });
+profileNewProfile.addEventListener("click", function () { screenController(1) });
+playNoProfile.addEventListener("click", function () { alert("The board, user, score and data will not be storage"); screenController(2) });
+
+// GO BACK BTN
+const goBack2 = document.getElementById("goBack2");
+const goBack3 = document.getElementById("goBack3");
+const goBack4 = document.getElementById("goBack4");
+const goBack5 = document.getElementById("goBack5");
+
+goBack2.addEventListener("click", function () { screenController(0) });
+goBack3.addEventListener("click", function () { screenController(0) });
+goBack4.addEventListener("click", function () { screenController(0) });
+goBack5.addEventListener("click", function () { screenController(0) });
+
+function screenController(option) {
+
+    homeScreen.style.display = "none";
+    profileScreen.style.display = "none";
+    newProfileScreen.style.display = "none";
+    rankingScreen.style.display = "none";
+    boardScreen.style.display = "none";
+
+    switch (option) {
+        case 0:
+            homeScreen.style.display = "block";
+            break;
+        case 1:
+            newProfileScreen.style.display = "block";
+            break;
+        case 2:
+            boardScreen.style.display = "block";
+            board_Manager();
+            break;
+        case 3:
+            rankingScreen.style.display = "block";
+            break;
+        case 4:
+            profileScreen.style.display = "block";
+            break;
+    }
+
+}

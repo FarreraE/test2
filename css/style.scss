@@ -159,6 +159,17 @@ header {
 footer {
     height: 20vh;
 }
+
+.back{
+    font-weight: bold;
+    color: var(--colorSecun);
+    font-size: 1.2em;
+    font-family: 'Exo 2', sans-serif;
+
+}.back:hover{
+    color: var(--colorSecun);
+    font-family: 'Exo 2', sans-serif;
+}
 @import "home";
 @import "globalScore";
 @import "profileList";
