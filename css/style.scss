@@ -35,7 +35,7 @@ body {
 
 
 header {
-    height: 20vh;
+    height: 25vh;
     font-family: 'Fredoka One', cursive;
     display: flex;
     flex-direction: column;
@@ -110,8 +110,23 @@ header {
     }
 }
 
+#oficialBoard {
+    margin-top: -50vh;
+}
+
+
 .tablero {
+    margin-top: 2%;
     height: 50vh;
+    width: 100%;
+    background-color: var(--colorBase);
+    border-radius: 0.5em;
+    border: var(--colorThird) solid 3px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 5%;
+    padding-right: 5%;
+
 
     .row_group_container {
         display: flex;
@@ -120,30 +135,43 @@ header {
     }
 
     .target {
-        color: #303030;
-        width: 24.75%;
+        color: (--colorBase);
+        width: 4.606rem;
+        width: 4.606rem;
         text-align: center;
         align-items: center;
         font-family: monospace;
         font-size: 2.4em;
         border-radius: 0.2em;
+        border: var(--colorBase) solid 3px;
+        position: relative;
     }
 
+    .targetOB {
+        color: (--colorBase);
+        width: 4.606rem;
+        width: 4.606rem;
+        text-align: center;
+        align-items: center;
+        font-family: monospace;
+        font-size: 2.4em;
+        border-radius: 0.2em;
+        border: var(--colorBase) solid 3px;
+        position: relative;
+    }
+
+
     .active {
-        background-color: var(--colorPrima);
-        border: var(--colorBase) solid 2px;
-        opacity: 0.6;
-        color: azure;
+        background-color: var(--colorBase);
+        color: (var(--colorThird));
         font-weight: bolder;
     }
 
     .nonActive {
         background-color: var(--colorSecun);
-        border: var(--colorBase) solid 2px;
-        opacity: 0.8;
         font-weight: bolder;
+        color: #303030;
     }
-
     .margLeft {
         margin-left: 1%;
     }
@@ -152,6 +180,7 @@ header {
         margin-top: 1%;
     }
 }
+
 .score {
     height: 10vh;
 }
@@ -160,18 +189,20 @@ footer {
     height: 20vh;
 }
 
-.back{
+.back {
     font-weight: bold;
     color: var(--colorSecun);
     font-size: 1.2em;
     font-family: 'Exo 2', sans-serif;
 
-}.back:hover{
+}
+
+.back:hover {
     color: var(--colorSecun);
     font-family: 'Exo 2', sans-serif;
 }
+
 @import "home";
 @import "globalScore";
 @import "profileList";
 @import "newProfile";
-

@@ -34,7 +34,7 @@ body {
 }
 
 header {
-  height: 20vh;
+  height: 25vh;
   font-family: 'Fredoka One', cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,8 +134,21 @@ header .scoreHeader .btn-link:hover {
   color: inherit;
 }
 
+#oficialBoard {
+  margin-top: -50vh;
+}
+
 .tablero {
+  margin-top: 2%;
   height: 50vh;
+  width: 100%;
+  background-color: var(--colorBase);
+  border-radius: 0.5em;
+  border: var(--colorThird) solid 3px;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .tablero .row_group_container {
@@ -148,8 +161,9 @@ header .scoreHeader .btn-link:hover {
 }
 
 .tablero .target {
-  color: #303030;
-  width: 24.75%;
+  color: --colorBase;
+  width: 4.606rem;
+  width: 4.606rem;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -157,21 +171,35 @@ header .scoreHeader .btn-link:hover {
   font-family: monospace;
   font-size: 2.4em;
   border-radius: 0.2em;
+  border: var(--colorBase) solid 3px;
+  position: relative;
+}
+
+.tablero .targetOB {
+  color: --colorBase;
+  width: 4.606rem;
+  width: 4.606rem;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: monospace;
+  font-size: 2.4em;
+  border-radius: 0.2em;
+  border: var(--colorBase) solid 3px;
+  position: relative;
 }
 
 .tablero .active {
-  background-color: var(--colorPrima);
-  border: var(--colorBase) solid 2px;
-  opacity: 0.6;
-  color: azure;
+  background-color: var(--colorBase);
+  color: var(--colorThird);
   font-weight: bolder;
 }
 
 .tablero .nonActive {
   background-color: var(--colorSecun);
-  border: var(--colorBase) solid 2px;
-  opacity: 0.8;
   font-weight: bolder;
+  color: #303030;
 }
 
 .tablero .margLeft {
@@ -461,7 +489,6 @@ footer {
 
 .newProfileMiddle form .themes .themeOption {
   width: 100%;
-  padding-top: 2%;
 }
 
 .newProfileMiddle form .themes .themeOption .themeExample {
@@ -498,7 +525,7 @@ footer {
 
 .newProfileMiddle form .themes .themeOption .themeDescription {
   position: absolute;
-  padding-top: 3%;
+  padding-top: 1%;
   font-size: 1rem;
   text-align: center;
 }

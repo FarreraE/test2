@@ -81,9 +81,10 @@ class Board {
         pCard.reset();
 
         board.assign_Col_Row(aCard, bCard, cCard, dCard, eCard, fCard, gCard, hCard, iCard, jCard, kCard, lCard, mCard, nCard, oCard, pCard);
+        $('.targetOB').removeClass('nonActive');
+        $('.targetOB').removeClass('active');
         board_Manager();
     }
-
     // METODO DE PRUEBA UTILIZADO PARA COMPROBAR LOS DATOS DEL TABLERO
     ordenar() {
         // CONSOLE LOG DE CADA GRID, FILAS Y COLUMNAS DEL TABLERO
@@ -153,6 +154,12 @@ class Card {
     }
     reset() {
         this.valueCard = 0;
+    }
+    setValue(valueCard) {
+        this.valueCard = valueCard
+    }
+    getValue() {
+        return this.valueCard;
     }
 };
 
@@ -247,6 +254,8 @@ function board_Manager() {
     else {
         board.reset();
     }
+
+    findOne();
 }
 // RECORRE LOS VECTORES DEL TABLERO PARA ASIGNAR VALORES
 function setGrid(board_Vector) {
@@ -394,12 +403,190 @@ function validarRandom(random) {
 function assingnVector(random) {
     randomVector[random - 1] = random;
 }
+
+/* CREA VAR AUX DE LOS GRID A INSPECCIONAR PARA ENCONTRAR EL VALOR 1*/
+function findOne() {
+    $('.targetOB').removeClass('nonActive');
+    $('.targetOB').removeClass('active');
+    $('.targetOB').addClass('nonActive');
+
+    let boardValues = Object.values(board);
+    let fOGridA = boardValues[0];
+    let fOGridB = boardValues[1];
+    let fOGridC = boardValues[2];
+    let fOGridD = boardValues[3];
+
+    let fOcardA = gridInspectionFO(fOGridA);
+    formatFO(fOcardA.xIndex, fOcardA.yIndex);
+    let fOcardB = gridInspectionFO(fOGridB);
+    formatFO(fOcardB.xIndex, fOcardB.yIndex);
+    let fOcardC = gridInspectionFO(fOGridC);
+    formatFO(fOcardC.xIndex, fOcardC.yIndex);
+    let fOcardD = gridInspectionFO(fOGridD);
+    formatFO(fOcardD.xIndex, fOcardD.yIndex);
+}
+/*RECORRE EL GRID QUE PASA POR PARAMETRO PARA IDENTIFICAR LA CARTA 
+CON VALOR 1*/
+function gridInspectionFO(vectorFO) {
+    for (const cardAux of vectorFO) {
+        if (cardAux.valueCard == 1) {
+            return cardAux;
+        }
+    }
+}
+/*CAMBIA LA CLASS DE LA CARTA INDICADA POR EL INDEX*/
+function formatFO(xIndex, yIndex) {
+    switch (xIndex) {
+        case 0:
+            if (yIndex == 0) {
+                $('#aCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 1) {
+                $('#bCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 2) {
+                $('#cCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 3) {
+                $('#dCard').toggleClass('active nonActive');
+                break;
+            }
+            break;
+        case 1:
+            if (yIndex == 0) {
+                $('#eCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 1) {
+                $('#fCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 2) {
+                $('#gCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 3) {
+                $('#hCard').toggleClass('active nonActive');
+                break;
+            }
+            break;
+        case 2:
+            if (yIndex == 0) {
+                $('#iCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 1) {
+                $('#jCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 2) {
+                $('#kCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 3) {
+                $('#lCard').toggleClass('active nonActive');
+                break;
+            }
+            break;
+        case 3:
+            if (yIndex == 0) {
+                $('#mCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 1) {
+                $('#nCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 2) {
+                $('#oCard').toggleClass('active nonActive');
+                break;
+            }
+            if (yIndex == 3) {
+                $('#pCard').toggleClass('active nonActive');
+                break;
+            }
+            break;
+    }
+}
+
 /*---------- END BOARD SECTION -----*/
 //PENDIENTE:
-        /*---------- PLAY SECTION -----*/
-        // CLASE JUGAR
+/*---------- PLAY SECTION -----*/
+// CLASE JUGAR
 
-        /*---------- END PLAY SECTION -----*/
+
+
+//JQUERY ANIMATIONS BOARD
+
+$(document).ready(movementManager());
+
+function indentifyGrid(idOption) {
+    switch (idOption) {
+        case "aCard": case "bCard": case "eCard": case "fCard":
+            return board.gridA;
+        case "cCard": case "dCard": case "gCard": case "hCard":
+            return board.gridB;
+        case "iCard": case "jCard": case "mCard": case "nCard":
+            return board.gridC;
+        case "kCard": case "lCard": case "oCard": case "pCard":
+            return board.gridD;
+    }
+}
+function indentifyGridIndex(letter) {
+    switch (letter) {
+        case "a": case "c": case "i": case "k":
+            return 0;
+        case "b": case "d": case "j": case "l":
+            return 1;
+        case "e": case "g": case "m": case "o":
+            return 2;
+        case "f": case "h": case "n": case "p":
+            return 3;
+    }
+}
+
+function movementManager() {
+
+    $(".targetOB").click(function (e) {
+        var target = e.currentTarget.id;
+        var gridAux = indentifyGrid(target);
+        var letter = Array.from(target)
+        var targetCard = gridAux[indentifyGridIndex(letter[0])];
+        var oneCard = gridInspectionFO(gridAux);
+        
+        console.log(targetCard.valueCard);
+        $("#" + target).removeClass("active");
+
+        /* $("#bCard").animate({ right: 73.7 }, 1000, function () {
+             let aux = aCard.getValue();
+             aCard.setValue(bCard.getValue());
+             aCard.assignCardValuesHTML(aCardBtn);
+             //tarjeta A cambia formato 
+             $('#aCard').toggleClass('active nonActive');
+             board.display_Board();
+             //tarjeta B opacidad a 0
+             $("#bCard").css({ opacity: 0.0 });
+             //tarjeta B cambia valor
+             bCard.setValue(aux);
+             bCard.assignCardValuesHTML(bCardBtn);
+ 
+             //tarjeta B cambia formato y desplaza
+             $('#bCard').toggleClass('nonActive active');
+         });
+         //tarjeta A cambia valor
+ 
+         $("#bCard").animate({ left: 0 }, 100, function () {
+             //tarjeta B opacidad a 0
+             $("#bCard").css({ opacity: 1 });
+         });*/
+
+    });
+}
+/*---------- END PLAY SECTION -----*/
+
 /*---------- PLAYER SECTION -----*/
 // CLASE JUGADOR 
 class Player {
@@ -502,16 +689,16 @@ function createUser() {
 
     playerList.push(newPlayer);
     // CONVIERTE LA LISTA DE JUGADORES A JSON
-     listPlayerJSON = JSON.stringify(playerList);
+    listPlayerJSON = JSON.stringify(playerList);
     // GUARDO LA LISTA EN FORMATO JSON
     localStorage.setItem('playerListJSON', listPlayerJSON);
     console.log("capturado");
-    
+
     let listAux = localStorage.getItem('playerListJSON');
     listAuxParse = JSON.parse(listAux);
-    
+
     player1.innerHTML = listAuxParse[1].playerName;
-    
+
 }
 /*---------- END PLAYER SECTION -----*/
 
