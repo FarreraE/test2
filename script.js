@@ -161,6 +161,10 @@ class Card {
     getValue() {
         return this.valueCard;
     }
+    getCoordinates() {
+        let coordinates = String(this.xIndex) + String(this.yIndex);
+        return coordinates;
+    }
 };
 
 // INICIA EL TABLERO
@@ -547,42 +551,157 @@ function indentifyGridIndex(letter) {
             return 3;
     }
 }
+function coordinateTranslate(coordinates) {
+    switch (coordinates) {
+        case "00": case "02": case "20": case "22":
+            return 0;
+        case "01": case "03": case "21": case "23":
+            return 1;
+        case "10": case "12": case "30": case "32":
+            return 2;
+        case "11": case "13": case "31": case "33":
+            return 3;
+    }
+}
+
+function movementValidation(targetCard, oneCard) {
+
+    switch (coordinateTranslate(targetCard.getCoordinates())) {
+        case 0:
+            if (coordinateTranslate(oneCard.getCoordinates()) == 1) {
+                return 1;
+            }
+            if (coordinateTranslate(oneCard.getCoordinates()) == 2) {
+                return 2;
+            }
+            return 6;
+        case 1:
+            if (coordinateTranslate(oneCard.getCoordinates()) == 0) {
+                return 3;
+            }
+            if (coordinateTranslate(oneCard.getCoordinates()) == 3) {
+                return 2;
+            }
+            return 6;
+        case 2:
+            if (coordinateTranslate(oneCard.getCoordinates()) == 0) {
+                return 0;
+            }
+            if (coordinateTranslate(oneCard.getCoordinates()) == 3) {
+                return 1;
+            }
+            return 6;
+        case 3:
+            if (coordinateTranslate(oneCard.getCoordinates()) == 1) {
+                return 0;
+            }
+            if (coordinateTranslate(oneCard.getCoordinates()) == 2) {
+                return 3;
+            }
+            return 6;
+    }
+}
+
+
+function shiftCard(targetCard, oneCard, target, direction) {
+    zIndexOrchestator(direction);
+    switch (direction) {
+        case 0:
+            $("#" + target).animate({ bottom: 73.7 }, 1000, function () {
+                oneCard.setValue(targetCard.getValue());
+                board.display_Board();
+                $("#" + target).css({ opacity: 0.0 });
+                targetCard.setValue(1);
+                $("#" + target).toggleClass('active nonActive');
+                findOne();
+                board.display_Board();
+                $("#" + target).animate({ bottom: 0 }, 1000, function () {
+                    $("#" + target).css({ opacity: 1.0 });
+                });
+            });
+            break;
+        case 1:
+            $("#" + target).animate({ left: 73.7 }, 1000, function () {
+                oneCard.setValue(targetCard.getValue());
+                board.display_Board();
+                $("#" + target).css({ opacity: 0.0 });
+                targetCard.setValue(1);
+                $("#" + target).toggleClass('active nonActive');
+                findOne();
+                board.display_Board();
+                $("#" + target).animate({ left: 0 }, 1000, function () {
+                    $("#" + target).css({ opacity: 1.0 });
+                });
+            });
+            break;
+        case 2:
+            $("#" + target).animate({ bottom: - 73.7 }, 1000, function () {
+                oneCard.setValue(targetCard.getValue());
+                board.display_Board();
+                $("#" + target).css({ opacity: 0.0 });
+                targetCard.setValue(1);
+                $("#" + target).toggleClass('active nonActive');
+                findOne();
+                board.display_Board();
+                $("#" + target).animate({ bottom: 0 }, 1000, function () {
+                    $("#" + target).css({ opacity: 1.0 });
+                });
+            });
+            break;
+        case 3:
+            $("#" + target).animate({ right: 73.7 }, 1000, function () {
+                oneCard.setValue(targetCard.getValue());
+                board.display_Board();
+                $("#" + target).css({ opacity: 0.0 });
+                targetCard.setValue(1);
+                $("#" + target).toggleClass('active nonActive');
+                findOne();
+                board.display_Board();
+                $("#" + target).animate({ right: 0 }, 1000, function () {
+                    $("#" + target).css({ opacity: 1.0 });
+                });
+            });
+            break;
+    }
+}
+function zIndexOrchestator(direction) {
+
+    switch (direction) {
+        case 0:
+            $("#row1").css('zIndex', 1);
+            $("#row3").css('zIndex', 1);
+            $("#row2").css('zIndex', 9);
+            $("#row4").css('zIndex', 9);
+
+            break;
+        case 1:
+            $(".left").css('zIndex', 9);
+            $(".right").css('zIndex', 1);
+            break;
+        case 2:
+            $("#row1").css('zIndex', 9);
+            $("#row3").css('zIndex', 9);
+            $("#row2").css('zIndex', 1);
+            $("#row4").css('zIndex', 1);
+            break;
+        case 3:
+            $(".left").css('zIndex', 1);
+            $(".right").css('zIndex', 9);
+            break;
+    }
+}
 
 function movementManager() {
 
     $(".targetOB").click(function (e) {
-        var target = e.currentTarget.id;
-        var gridAux = indentifyGrid(target);
-        var letter = Array.from(target)
-        var targetCard = gridAux[indentifyGridIndex(letter[0])];
-        var oneCard = gridInspectionFO(gridAux);
-        
-        console.log(targetCard.valueCard);
-        $("#" + target).removeClass("active");
+        let target = e.currentTarget.id;
+        let gridAux = indentifyGrid(target);
+        let letter = Array.from(target);
+        let targetCard = gridAux[indentifyGridIndex(letter[0])];
+        let oneCard = gridInspectionFO(gridAux);
+        let direction = movementValidation(targetCard, oneCard);
 
-        /* $("#bCard").animate({ right: 73.7 }, 1000, function () {
-             let aux = aCard.getValue();
-             aCard.setValue(bCard.getValue());
-             aCard.assignCardValuesHTML(aCardBtn);
-             //tarjeta A cambia formato 
-             $('#aCard').toggleClass('active nonActive');
-             board.display_Board();
-             //tarjeta B opacidad a 0
-             $("#bCard").css({ opacity: 0.0 });
-             //tarjeta B cambia valor
-             bCard.setValue(aux);
-             bCard.assignCardValuesHTML(bCardBtn);
- 
-             //tarjeta B cambia formato y desplaza
-             $('#bCard').toggleClass('nonActive active');
-         });
-         //tarjeta A cambia valor
- 
-         $("#bCard").animate({ left: 0 }, 100, function () {
-             //tarjeta B opacidad a 0
-             $("#bCard").css({ opacity: 1 });
-         });*/
-
+        shiftCard(targetCard, oneCard, target, direction);
     });
 }
 /*---------- END PLAY SECTION -----*/

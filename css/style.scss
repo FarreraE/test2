@@ -126,10 +126,13 @@ header {
     padding-bottom: 2%;
     padding-left: 5%;
     padding-right: 5%;
+
     .row_group_container {
         display: flex;
         flex-wrap: nowrap;
         height: 25%;
+        z-index: 1;
+        position: relative;
     }
 
     .target {
@@ -145,6 +148,13 @@ header {
         position: relative;
     }
 
+    .activeOne {
+        background-color: var(--colorBase);
+        color: (var(--colorThird));
+        font-weight: bolder;
+      
+    }
+
     .targetOB {
         color: (--colorBase);
         width: 4.606rem;
@@ -156,6 +166,7 @@ header {
         border-radius: 0.2em;
         border: var(--colorBase) solid 3px;
         position: relative;
+
     }
 
 
@@ -163,13 +174,18 @@ header {
         background-color: var(--colorBase);
         color: (var(--colorThird));
         font-weight: bolder;
+    
     }
+
+
 
     .nonActive {
         background-color: var(--colorSecun);
         font-weight: bolder;
         color: #303030;
+       
     }
+
     .margLeft {
         margin-left: 1%;
     }

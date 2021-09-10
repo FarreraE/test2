@@ -158,6 +158,8 @@ header .scoreHeader .btn-link:hover {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   height: 25%;
+  z-index: 1;
+  position: relative;
 }
 
 .tablero .target {
@@ -173,6 +175,12 @@ header .scoreHeader .btn-link:hover {
   border-radius: 0.2em;
   border: var(--colorBase) solid 3px;
   position: relative;
+}
+
+.tablero .activeOne {
+  background-color: var(--colorBase);
+  color: var(--colorThird);
+  font-weight: bolder;
 }
 
 .tablero .targetOB {
