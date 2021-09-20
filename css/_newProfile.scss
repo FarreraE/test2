@@ -26,33 +26,33 @@
                 .themeExample { 
                     width: 2.5rem;
                     height: 2.5rem;
-                    border-radius: 2.5rem;
+                    border-radius: 0.5rem;
                     border: 0.2rem solid var(--colorThird);
                 }
 
                 .green {
                     background: rgb(82, 115, 77);
-                    background: linear-gradient(220deg, rgba(82, 115, 77, 1) 0%, rgba(145, 199, 136, 1) 50%, rgba(221, 255, 188, 1) 80%, rgba(238, 238, 238, 1) 90%);
+                    background: linear-gradient(180deg, #95da9d 0%, #75b989 74%);
                 }
 
                 .purple {
                     background: rgb(23, 1, 41);
-                    background: linear-gradient(220deg, rgba(23, 1, 41, 1) 0%, rgba(106, 0, 198, 1) 50%, rgba(87, 64, 107, 1) 80%, rgba(240, 240, 240, 1) 90%);
+                    background: linear-gradient(180deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);
                 }
 
                 .dark {
                     background: rgb(0, 0, 0);
-                    background: linear-gradient(220deg, rgba(0, 0, 0, 1) 0%, rgba(34, 40, 49, 1) 50%, rgba(34, 40, 49, 1) 80%, rgba(238, 238, 238, 1) 90%);
+                    background: linear-gradient(160deg, #282B30 0%, #232324 80%);
                 }
 
                 .light {
                     background: rgb(181, 181, 181);
-                    background: linear-gradient(220deg, rgba(181, 181, 181, 1) 0%, rgba(250, 255, 224, 1) 11%, rgba(250, 255, 224, 1) 66%, rgba(237, 237, 237, 1) 94%);
+                    background: linear-gradient(0deg, #f0f0f0 0%, #fff 74%);
                 }
 
                 .activeTheme {
-                    border: 0.2rem solid #ffe600;
-                    border-radius: 0.5rem;
+                    border: 0.2rem solid var(--colorThird);
+                    border-radius: 2.5rem;
                 }
 
                 .themeDescription {

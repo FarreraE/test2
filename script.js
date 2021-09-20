@@ -1008,7 +1008,7 @@ class Settings {
 }
 
 let playerList = [];
-/*
+
 const styleCss = document.documentElement.style;
 
 const themeGreen = document.getElementById("themeGreen");
@@ -1022,8 +1022,8 @@ themeGreen.addEventListener("click", function () { setTheme(0) });
 themePurple.addEventListener("click", function () { setTheme(1) });
 themeDark.addEventListener("click", function () { setTheme(2) });
 themeLight.addEventListener("click", function () { setTheme(3) });
-*/
-/*function setTheme(Option) {
+
+function setTheme(Option) {
 
     themeGreen.className = "themeExample green";
     themePurple.className = "themeExample purple";
@@ -1034,36 +1034,50 @@ themeLight.addEventListener("click", function () { setTheme(3) });
 
         case 0:
             themeGreen.className = "themeExample green activeTheme";
-            styleCss.setProperty('--colorBase', '#52734D');
-            styleCss.setProperty('--colorPrima', '#91C788');
-            styleCss.setProperty('--colorSecun', '#DDFFBC');
-            styleCss.setProperty('--colorThird', '#EEEEEE');
+            styleCss.setProperty('--colorPrima', '#7ecc87');
+            styleCss.setProperty('--colorSecun', '#4f5250');
+            styleCss.setProperty('--colorThird', '#fff');
+            styleCss.setProperty('--gradientBase', '#478d4f');
+            styleCss.setProperty('--gradient', 'linear-gradient(180deg, #95da9d 0%, #75b989 74%)');
+            styleCss.setProperty('--gradientBoard', 'linear-gradient(310deg, #95da9d 0%, #75b989 74%)');
+            styleCss.setProperty('--gradientEnd', '#75b989');
             break;
         case 1:
             themePurple.className = "themeExample purple activeTheme";
 
-            styleCss.setProperty('--colorBase', '#2e3154');
-            styleCss.setProperty('--colorPrima', '#57406b');
-            styleCss.setProperty('--colorSecun', '#e076a5');
-            styleCss.setProperty('--colorThird', '#EEEEEE');
+            styleCss.setProperty('--colorPrima', '#4c5186');
+            styleCss.setProperty('--colorSecun', '#39A3CD');
+            styleCss.setProperty('--colorThird', '#43DEBB');
+            styleCss.setProperty('--gradientBase', 'rgb(30, 33, 64)');
+            styleCss.setProperty('--gradient', 'linear-gradient(180deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%)');
+            styleCss.setProperty('--gradientBoard', 'linear-gradient(310deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%)');
+            styleCss.setProperty('--gradientEnd', 'rgba(45, 50, 94,1)');
             break;
         case 2:
             themeDark.className = "themeExample dark activeTheme";
-            styleCss.setProperty('--colorBase', '#222831');
-            styleCss.setProperty('--colorPrima', '#393E46');
-            styleCss.setProperty('--colorSecun', '#EEEEEE');
-            styleCss.setProperty('--colorThird', '#EEEEEE');
+            
+            styleCss.setProperty('--colorPrima', '#5c5e62');
+            styleCss.setProperty('--colorSecun', '#68d1c5');
+            styleCss.setProperty('--colorThird', '#000');
+            styleCss.setProperty('--gradientBase', 'rgb(255, 255, 255)');
+            styleCss.setProperty('--gradient', 'linear-gradient(0deg, #282B30 0%, #232324 74%)');
+            styleCss.setProperty('--gradientBoard', 'linear-gradient(310deg, #282B30 0%, #232324 74%)');
+            styleCss.setProperty('--gradientEnd', '#282B30');
             break;
         case 3:
             themeLight.className = "themeExample light activeTheme";
-            styleCss.setProperty('--colorBase', '#EEEEEE');
-            styleCss.setProperty('--colorPrima', '#DDFFBC');
-            styleCss.setProperty('--colorSecun', '#DDFFBC');
-            styleCss.setProperty('--colorThird', '#000000');
+            
+            styleCss.setProperty('--colorPrima', '#fff');
+            styleCss.setProperty('--colorSecun', '#000');
+            styleCss.setProperty('--colorThird', '#6d6d6d');
+            styleCss.setProperty('--gradientBase', 'rgb(255, 255, 255)');
+            styleCss.setProperty('--gradient', 'linear-gradient(0deg, #282B30 0%, #fff 74%)');
+            styleCss.setProperty('--gradientBoard', 'linear-gradient(310deg, #f0f0f0 0%, #fff 74%)');
+            styleCss.setProperty('--gradientEnd', '#f0f0f0');
             break;
     }
 
-}*/
+}
 
 // CREA UN NUEVO USUARIO Y LO GUARDA EN EL LOCAL STORAGE
 function createUser() {

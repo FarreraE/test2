@@ -6,7 +6,7 @@
 }
 
 :root {
-  /*--colorPrima: #4c5186;
+  /*  --colorPrima: #4c5186;
     --colorSecun: #39A3CD;
     --colorThird: #43DEBB;
 
@@ -14,18 +14,17 @@
     --gradientBase: rgb(30, 33, 64);
     --gradient: linear-gradient(180deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);
     --gradientBoard: linear-gradient(310deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);
-    ;
     --gradientEnd: rgba(45, 50, 94, 1);
 */
   /*
-    --colorPrima: #95da9d;
-    --colorSecun: #8FFF57;
-    --colorThird: #5A8266;    
+    --colorPrima: #7ecc87;
+    --colorSecun: #4f5250;
+    --colorThird: #fff;    
 
     --gradientBase:  #478d4f;
-    --gradient:linear-gradient(180deg, #38c849 0%, #20a849 74%);
-    --gradientBoard:linear-gradient(310deg, #38c849 0%, #20a849 74%);
-    --gradientEnd: #20a849;*/
+    --gradient:linear-gradient(180deg, #95da9d 0%, #75b989 74%);
+    --gradientBoard:linear-gradient(310deg, #95da9d 0%, #75b989 74%);
+    --gradientEnd: #75b989;*/
   /*
     --colorPrima: #fff;
     --colorSecun: #000;
@@ -177,8 +176,8 @@ body {
   border-radius: 0.5em;
   font-family: 'Exo 2', sans-serif;
   margin-top: 3%;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
 }
 
 .boardScreen .boardCombo #oficialBoard {
@@ -279,8 +278,8 @@ body {
   background-color: var(--colorPrima);
   font-weight: bolder;
   color: var(--colorThird);
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 8px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 8px;
 }
 
 .boardScreen .boardCombo .tablero .row_group_container .margLeft {
@@ -585,33 +584,36 @@ body {
 .newProfileMiddle form .themes .themeOption .themeExample {
   width: 2.5rem;
   height: 2.5rem;
-  border-radius: 2.5rem;
+  border-radius: 0.5rem;
   border: 0.2rem solid var(--colorThird);
 }
 
 .newProfileMiddle form .themes .themeOption .green {
   background: #52734d;
-  background: linear-gradient(220deg, #52734d 0%, #91c788 50%, #ddffbc 80%, #eeeeee 90%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#95da9d), color-stop(74%, #75b989));
+  background: linear-gradient(180deg, #95da9d 0%, #75b989 74%);
 }
 
 .newProfileMiddle form .themes .themeOption .purple {
   background: #170129;
-  background: linear-gradient(220deg, #170129 0%, #6a00c6 50%, #57406b 80%, #f0f0f0 90%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1e2140), color-stop(10%, #222547), color-stop(30%, #25294f), color-stop(75%, #292e56), color-stop(94%, #2d325e));
+  background: linear-gradient(180deg, #1e2140 0%, #222547 10%, #25294f 30%, #292e56 75%, #2d325e 94%);
 }
 
 .newProfileMiddle form .themes .themeOption .dark {
   background: black;
-  background: linear-gradient(220deg, black 0%, #222831 50%, #222831 80%, #eeeeee 90%);
+  background: linear-gradient(160deg, #282B30 0%, #232324 80%);
 }
 
 .newProfileMiddle form .themes .themeOption .light {
   background: #b5b5b5;
-  background: linear-gradient(220deg, #b5b5b5 0%, #faffe0 11%, #faffe0 66%, #ededed 94%);
+  background: -webkit-gradient(linear, left bottom, left top, from(#f0f0f0), color-stop(74%, #fff));
+  background: linear-gradient(0deg, #f0f0f0 0%, #fff 74%);
 }
 
 .newProfileMiddle form .themes .themeOption .activeTheme {
-  border: 0.2rem solid #ffe600;
-  border-radius: 0.5rem;
+  border: 0.2rem solid var(--colorThird);
+  border-radius: 2.5rem;
 }
 
 .newProfileMiddle form .themes .themeOption .themeDescription {

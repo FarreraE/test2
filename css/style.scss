@@ -5,7 +5,7 @@
 }
 
 :root {
-    /*--colorPrima: #4c5186;
+  /*  --colorPrima: #4c5186;
     --colorSecun: #39A3CD;
     --colorThird: #43DEBB;
 
@@ -13,17 +13,16 @@
     --gradientBase: rgb(30, 33, 64);
     --gradient: linear-gradient(180deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);
     --gradientBoard: linear-gradient(310deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);
-    ;
     --gradientEnd: rgba(45, 50, 94, 1);
 *//*
-    --colorPrima: #95da9d;
-    --colorSecun: #8FFF57;
-    --colorThird: #5A8266;    
+    --colorPrima: #7ecc87;
+    --colorSecun: #4f5250;
+    --colorThird: #fff;    
 
     --gradientBase:  #478d4f;
-    --gradient:linear-gradient(180deg, #38c849 0%, #20a849 74%);
-    --gradientBoard:linear-gradient(310deg, #38c849 0%, #20a849 74%);
-    --gradientEnd: #20a849;*/
+    --gradient:linear-gradient(180deg, #95da9d 0%, #75b989 74%);
+    --gradientBoard:linear-gradient(310deg, #95da9d 0%, #75b989 74%);
+    --gradientEnd: #75b989;*/
 /*
     --colorPrima: #fff;
     --colorSecun: #000;
@@ -157,7 +156,7 @@ body {
         border-radius: 0.5em;
         font-family: 'Exo 2', sans-serif;
         margin-top: 3%;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
         #oficialBoard {
             margin-top: -300px;
             z-index: 5;
@@ -240,7 +239,7 @@ body {
                     background-color: var(--colorPrima);
                     font-weight: bolder;
                     color: var(--colorThird);
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 8px;
                 }
 
                 .margLeft {
