@@ -1,0 +1,25 @@
+{
+    "ranking": [
+        {
+            "playerName": "Ely Farrera",
+            "playerID": 1,
+            "movement": 1,
+            "minutes": 0,
+            "seconds": 50
+        },
+        {
+            "playerName": "Pepe Quintana",
+            "playerID": 1,
+            "movement": 90,
+            "minutes": 1,
+            "seconds": 40
+        },
+        {
+            "playerName": "Ana Algo",
+            "playerID": 2,
+            "movement": 100,
+            "minutes": 2,
+            "seconds": 20
+        }
+    ]
+}

@@ -1,85 +1,3 @@
-/*---------- SCORE SECTION -----*/
-class Score {
-    constructor(countMovements, timeScore) {
-        this.countMovements = countMovements;
-        this.timeMinutes = timeScore;
-        this.timeSeconds = timeScore;
-        this.timeActive = timeScore;
-        this.totalMovements = countMovements;
-        this.totaltimeMinutes = timeScore;
-        this.totaltimeSeconds = timeScore;
-    }
-
-    countMovementsDisplay() {
-
-        this.countMovements++;
-        if (this.countMovements < 10) {
-            $("#movements").html('00' + String(this.countMovements));
-        }
-        if (this.countMovements >= 10) {
-            $("#movements").html('0' + String(this.countMovements));
-        }
-        if (this.countMovements > 99) {
-            $("#movements").html(String(this.countMovements));
-        }
-    }
-
-    timeManager() {
-        timeCounter(this.timeSeconds, this.timeMinutes);
-    }
-    finalScore() {
-        this.totalMovements = this.countMovements;
-        this.totaltimeMinutes = this.timeScore;
-        this.totaltimeSeconds = this.timeScore;
-    }
-}
-function timeCounter(timeSeconds, timeMinutes) {
-    
-    let timeInterval = 1000;
-
-     cronometro = setInterval(function () {
-        if (timeSeconds == 60) {
-            timeSeconds = 0;
-            timeMinutes++;
-        }
-        if (timeMinutes == 60) {
-            //GAME OVER MESSAGE
-        }
-
-        timeDisplay(timeSeconds, timeMinutes);
-        timeSeconds++;
-
-    }, timeInterval);
-
-}
-function timeCounterStop(){
-     clearInterval(cronometro);
-}
-function timeDisplay(timeSeconds, timeMinutes) {
-
-    if (timeMinutes < 10) {
-        if (timeSeconds < 10) {
-            $("#time").html('0' + String(timeMinutes) + ':0' + String(timeSeconds));
-        }
-        if (timeSeconds >= 10) {
-            $("#time").html('0' + String(timeMinutes) + ':' + String(timeSeconds));
-        }
-    }
-    if (timeMinutes >= 10) {
-        if (timeSeconds < 10) {
-            $("#time").html(String(timeMinutes) + ':0' + String(timeSeconds));
-        }
-        if (timeSeconds >= 10) {
-            $("#time").html(String(timeMinutes) + ':' + String(timeSeconds));
-        }
-    }
-
-}
-
-const globalScore = new Score(0, 0);
-var cronometro;
-/*---------- END SCORE SECTION -----*/
-
 /*----------  BOARD SECTION -----*/
 // CLASS BOARD - CARDS
 class Board {
@@ -139,11 +57,12 @@ class Board {
         oCard.assignCardValuesHTML(oCardBtn);
         pCard.assignCardValuesHTML(pCardBtn);
     }
+
     /* BORRA LOS DATOS DEL TABLERO EN CASO DE ERROR Y LLAMA A LA FUNCION 
     BOARD_MANAGER PARA GENERAR UNO NUEVO */
+
     reset() {
-        //alert("reset");
-        console.log("----------------- last RESET");
+
         aCard.reset();
         bCard.reset();
         cCard.reset();
@@ -160,8 +79,7 @@ class Board {
         nCard.reset();
         oCard.reset();
         pCard.reset();
-        randomVector = [0, 0, 0, 0];
-        randomCount = 0;
+
         board.assign_Col_Row(aCard, bCard, cCard, dCard, eCard, fCard, gCard, hCard, iCard, jCard, kCard, lCard, mCard, nCard, oCard, pCard);
         $('.targetOB').removeClass('nonActive');
         $('.targetOB').removeClass('active');
@@ -170,9 +88,7 @@ class Board {
     // METODO DE PRUEBA UTILIZADO PARA COMPROBAR LOS DATOS DEL TABLERO
     ordenar() {
         // CONSOLE LOG DE CADA GRID, FILAS Y COLUMNAS DEL TABLERO
-        console.log("-- Tablero --");
-        console.log(aCard.valueCard + "" + bCard.valueCard + "" + cCard.valueCard + "" + dCard.valueCard + "\n" + eCard.valueCard + "" + fCard.valueCard + "" + gCard.valueCard + "" + hCard.valueCard + "\n" + iCard.valueCard + "" + jCard.valueCard + "" + kCard.valueCard + "" + lCard.valueCard + "\n" + mCard.valueCard + "" + nCard.valueCard + "" + oCard.valueCard + "" + pCard.valueCard);
-        /*console.log("### GRID A ###");
+        console.log("### GRID A ###");
         for (const cardAux of this.gridA) {
             console.log(cardAux.valueCard);
         }
@@ -250,11 +166,13 @@ class Card {
         return coordinates;
     }
 };
+
 // INICIA EL TABLERO
 const board = new Board(0);
 // VARIABLES GLOBLALES PARA COMPROBAR LA ASIGNACIÓN CORRECTA
 randomVector = [0, 0, 0, 0];
 let randomCount = 0;
+
 // INICIA LAS CARTAS
 // FILA 1
 let aCard = new Card(0, 0, board.gridA[0]);
@@ -279,6 +197,7 @@ let pCard = new Card(3, 3, board.gridD[3]);
 
 // ASIGNAR CARTAS AL TABLERO
 board.assign_Col_Row(aCard, bCard, cCard, dCard, eCard, fCard, gCard, hCard, iCard, jCard, kCard, lCard, mCard, nCard, oCard, pCard);
+
 // INTERACCIÓN CON EL DOM
 const aCardBtn = document.getElementById("aCard");
 const bCardBtn = document.getElementById("bCard");
@@ -312,36 +231,17 @@ function board_Manager() {
     if (setGrid(board.gridA) == true) {
         randomVector = [0, 0, 0, 0];
         randomCount = 0;
-        //  console.log("--------------------------");
-        //  board.ordenar();
         // ASIGNA VALORES AL GRID B
         if (setGrid(board.gridB) == true) {
             randomVector = [0, 0, 0, 0];
             randomCount = 0;
-            //  console.log("--------------------------");
-            //  board.ordenar();
             // ASIGNA VALORES AL GRID C
             if (setGrid(board.gridC) == true) {
                 randomCount = 0;
                 randomVector = [0, 0, 0, 0];
-                // console.log("--------------------------");
-                //  board.ordenar();
                 // ASIGNA VALORES AL GRID D
                 if (setGrid(board.gridD) == true) {
-                    randomVector = [0, 0, 0, 0];
-                    randomCount = 0;
-                    // console.log("--------------------------");
-                    //  board.ordenar();
                     board.display_Board();
-
-                    for (let changes = 0; changes < 1; changes++) {
-
-                        randomSwap();
-
-                    }
-                    findOne();
-                    board.display_Board();
-                    movementManager();
                 }
                 else {
                     board.reset();
@@ -358,15 +258,23 @@ function board_Manager() {
     else {
         board.reset();
     }
-
+    for (let changes = 0; changes < 10000; changes++) {
+        try {
+            randomSwap();
+        } catch (error) {
+            randomSwap();
+        }
+    }
+    findOne();
+    board.display_Board();
+    movementManager();
 }
 // RECORRE LOS VECTORES DEL TABLERO PARA ASIGNAR VALORES
 function setGrid(board_Vector) {
-    let validationManagerResult;
     for (const cardAux of board_Vector) {
 
         // ASIGNAR UN VALOR ENTRE 1 Y 4 A LA VARIABLE RANDOM
-        let random = null;
+        random = getRandom();
         /* IF VALIDA SI HA ALCANZADO EL LIME TE INTENTOS
         REGRESA FALSE PARA REINICIAR EL TABLERO*/
         if (random == false) {
@@ -382,18 +290,12 @@ function setGrid(board_Vector) {
                 //REINICIA VALIDACIONES
                 randomVector[random - 1] = 0;
                 random = getRandom();
-                ++randomCount;
-                validationManagerResult = validationManager(cardAux, random);
-                if (randomCount == 40) {
-                   // alert("reset Automatico");
-                    validationManagerResult = false;
-                    return false;
-                }
-            } while (validationManagerResult == false);
+            } while (validationManager(cardAux, random) == false);
 
-
+            if (random == false) {
+                return false;
+            }
             //SI SUPERA EL VALIDATION MANAGER ASIGNA EL VALOR A LA TARJETA
-            board.ordenar();
             cardAux.valueCard = random;
         }
 
@@ -472,7 +374,9 @@ function validateRow(cardAux, random) {
 }
 /* FUNCION QUE RETORNA UN VALOR RANDOM A ASIGNAR EN EL TRABLERO*/
 function getRandom() {
-    let random = Math.round(Math.random() * (199 - 1) + 1);
+    randomCount++;
+    let random = Math.round(Math.random() * (200 - 0) + 1);
+
     if (random >= 0 && random < 25 || random >= 150 && random < 175) {
         random = 1;
     }
@@ -485,17 +389,19 @@ function getRandom() {
     else if (random >= 75 && random < 100 || random >= 175 && random < 202) {
         random = 4;
     }
-
+    if (randomCount == 40) {
+        randomCount = 0;
+        return false;
+    }
     return validarRandom(random);
 }
 /* RECORRE UN VECTOR CON LOS VALORES QUE SE HAN ASIGNADO AL GRID
 PARA EVITAR DUPLICAR VALORES, SI EL VALOR YA SE ENCUENTRA EN EL VECTOR
 SOLICITA OTRO A LA FUNCIÓN GET RANDOM*/
 function validarRandom(random) {
-    //  console.log("PROBAR:" + random);
+
     for (let i = 0; i < 4; i++) {
         if (randomVector[i] == random) {
-            // console.log("NO SIRVE:" + random);
             return getRandom();
         }
     }
@@ -530,7 +436,7 @@ function formatFORS(fOcardA, fOcardB, fOcardC, fOcardD) {
 
     } catch (error) {
         formatFORS(fOcardA, fOcardB, fOcardC, fOcardD);
-        // return cardAux;
+        return cardAux;
     }
 
 }
@@ -552,7 +458,6 @@ function gridInspectionFO(vectorFO) {
 }
 /*CAMBIA LA CLASS DE LA CARTA INDICADA POR EL INDEX*/
 function formatFO(xIndex, yIndex) {
-    //alert(xIndex + "-" + yIndex);
     switch (xIndex) {
         case 0:
             if (yIndex == 0) {
@@ -630,90 +535,52 @@ function formatFO(xIndex, yIndex) {
 }
 /*CAMBIOS ALEATORIOS EN EL TABLERO PARA GENERAR DIFICULTAD DE JUEGO*/
 function randomSwap() {
-    boardValues = Object.values(board);
-    randomGrid = Math.round(Math.random() * 3);
-    gridAuxa = boardValues[randomGrid];
-    oneCard = gridInspectionFO(gridAuxa);
-    targetCard = new Card(0, 0, 0);
+    let boardValues = Object.values(board);
+    let random = Math.round(Math.random() * (4 - 1) + 1);
+    let gridAuxa = boardValues[random];
+    let oneCard = gridInspectionFO(gridAuxa);
+    let targetCard = new Card(0, 0, 0);
+
+    switch (coordinateTranslate(oneCard.getCoordinates())) {
+        case 0: case 3:
+            if (random >= 2) {
+                //  alert("entre");
+                targetCard = gridAuxa[2];
+            }
+            else {
+                // alert("entre else");
+                targetCard = gridAuxa[1];
+            }
+            break;
+
+        case 1: case 2:
+            if (random >= 2) {
+                //  alert("entre");
+                targetCard = gridAuxa[3];
+            }
+            else {
+                // alert("entre else");
+                targetCard = gridAuxa[0];
+            }
+            break;
+    }
 
     if (targetCard.valueCard != 1) {
-
-        switch (coordinateTranslate(oneCard.getCoordinates())) {
-            case 0: case 3:
-                if (randomGrid >= 2) {
-                    //  alert("entre");
-                    targetCard = gridAuxa[2];
-                }
-                else {
-                    // alert("entre else");
-                    targetCard = gridAuxa[1];
-                }
-                break;
-
-            case 1: case 2:
-                if (randomGrid >= 2) {
-                    //  alert("entre");
-                    targetCard = gridAuxa[3];
-                }
-                else {
-                    // alert("entre else");
-                    targetCard = gridAuxa[0];
-                }
-                break;
-        }
 
         oneCard.setValue(targetCard.getValue());
         targetCard.setValue(1);
 
     }
-    else {
-        console.log("randonswapaux");
-        randomSwap();
-    }
-
-    findOne();
-    board.display_Board();
 
 }
+
 /*---------- END BOARD SECTION -----*/
 
 /*---------- PLAY SECTION -----*/
-$(document).ready(function () {
-    board_Manager();
-    //obtainJsonRnaking();
-});
-//RANKING GLOBAL JSON
-let rankingArray = [];
-const obtainJsonRnaking = () => {
-    //Get Json
-    const URLJSON = "ranking.json";
-    $.getJSON(URLJSON, function (reply, status) {
-        if (status == "success") {
-            rankingArray = reply.ranking;
-            console.log(rankingArray);
-            renderizarRanking();
-        }
-    });
-}
-function renderizarRanking() {
-    console.log("entre");
-    for (const player of rankingArray) {
-        $("#rankingScreenDisplay").append(`
-        <div class="userDisplay">
-        <div class="offset-1 nameScore">
-            <h2>${player.playerName}</h2>
-        </div>
-        <div class=" movTimScore">
-            <img src="..img/movements.svg" class="movementImg" alt="">
-            <h3>${player.movement}</h3>
-            <img src="img/timmer.svg" class="timmerImg" alt="">
-            <h3>${player.minutes} ":"${player.seconds}</h3>
-        </div>
-    </div>
-    <hr>
-        `);
-    }
-}
+//JQUERY ANIMATIONS BOARD
+
+$(document).ready(board_Manager());
+
 function indentifyGrid(idOption) {
     switch (idOption) {
         case "aCard": case "bCard": case "eCard": case "fCard":
@@ -794,7 +661,7 @@ function shiftCard(targetCard, oneCard, target, direction) {
         case 0:
             $("#" + target).animate({ bottom: 73.7 }, 500, function () {
                 oneCard.setValue(targetCard.getValue());
-              //  board.display_Board();
+                board.display_Board();
                 $("#" + target).css({ opacity: 0.0 });
                 targetCard.setValue(1);
                 $("#" + target).toggleClass('active nonActive');
@@ -875,88 +742,9 @@ function zIndexOrchestator(direction) {
             break;
     }
 }
-function validationWinnerManager() {
-    if (validateWin(board.row0) == true) {
-        if (validateWin(board.row1) == true) {
-            if (validateWin(board.row2) == true) {
-                if (validateWin(board.row3) == true) {
-                    if (validateWin(board.col0) == true) {
-                        if (validateWin(board.col1) == true) {
-                            if (validateWin(board.col2) == true) {
-                                if (validateWin(board.col3) == true) {
-                                    //console.log("DONE");
-                                    /*ALMACENA El SCORE Y TIEMPO FINAL*/
-                                    globalScore.finalScore(globalScore.timeSeconds, globalScore.timeMinutes);
-
-                                    //STOP CLOCK 
-                                    /*DISPLAY El SCORE Y TIEMPO FINAL*/
-                                    timeDisplay(globalScore.totaltimeSeconds, globalScore.totaltimeMinutes);
-                                    //POP UP NEW GAME, FINAL SCORE, 
-                                    timeCounterStop();
-                                    alert("YOU WIN");
-                                }
-                                else {
-                                    console.log("not yet");
-                                }
-                            }
-                            else {
-                                console.log("not yet");
-                            }
-                        }
-                        else {
-                            console.log("not yet");
-                        }
-                    }
-                    else {
-                        console.log("not yet");
-                    }
-                }
-                else {
-                    console.log("not yet");
-                }
-            }
-            else {
-                console.log("not yet");
-            }
-        }
-        else {
-            console.log("not yet");
-        }
-    } else {
-        console.log("not yet");
-    }
-}
-function validateWin(vectorToValidate) {
-    // alert("entre");
-    let oneCard = false;
-    let twoCard = false;
-    let threeCard = false;
-    let fourCard = false;
-
-    for (const cardAux of vectorToValidate) {
-        if (cardAux.valueCard == 1) {
-            oneCard = true;
-        }
-        if (cardAux.valueCard == 2) {
-            twoCard = true;
-        }
-        if (cardAux.valueCard == 3) {
-            threeCard = true;
-        }
-        if (cardAux.valueCard == 4) {
-            fourCard = true;
-        }
-    }
-
-    if (oneCard == true && twoCard == true && threeCard == true && fourCard == true) {
-        return true;
-    }
-    return false;
-}
 function movementManager() {
 
     $(".targetOB").click(function (e) {
-
         let target = e.currentTarget.id;
         let gridAux = indentifyGrid(target);
         let letter = Array.from(target);
@@ -964,29 +752,71 @@ function movementManager() {
         let oneCard = gridInspectionFO(gridAux);
         let direction = movementValidation(targetCard, oneCard);
 
-        if (direction != 6 && globalScore.timeActive == 1) {
+        if (direction != 6) {
             globalScore.countMovementsDisplay();
             shiftCard(targetCard, oneCard, target, direction);
         }
-
-        else if (globalScore.timeActive == 0) {
-            globalScore.timeManager();
-            globalScore.timeActive = 1;
-            globalScore.countMovementsDisplay();
-            shiftCard(targetCard, oneCard, target, direction);
-        }
-        setTimeout(() => {
-            validationWinnerManager();
-        }, 1000);
 
     });
-
-
 }
 
-
 /*---------- END PLAY SECTION -----*/
+/*---------- SCORE SECTION -----*/
+class Score {
+    constructor(countMovements, timeScore) {
+        this.countMovements = countMovements;
+        this.timeMinutes = timeScore;
+        this.timeSeconds = timeScore;
+    }
 
+    countMovementsDisplay() {
+        console.log("entre");
+        this.countMovements++;
+        if (this.countMovements < 10) {
+            $("#movements").html('00' + String(this.countMovements));
+        }
+        if (this.countMovements >= 10) {
+            $("#movements").html('0' + String(this.countMovements));
+        }
+        if (this.countMovements > 99) {
+            $("#movements").html(String(this.countMovements));
+        }
+    }
+
+    timeManager() {
+        window.setInterval(function () {
+            if (this.timeSeconds == 60) {
+                this.timeSeconds = 0;
+                ++this.timeMinutes;
+            }
+            if (this.timeMinutes == 60) {
+                //GAME OVER MESSAGE
+            }
+
+            if (this.timeMinutes < 10) {
+                if (this.timeSeconds < 10) {
+                    $("#time").html('0' + String(this.timeMinutes) + ':0' + String(this.timeSeconds));
+                }
+                if (this.timeSeconds >= 10) {
+                    $("#time").html('0' + String(this.timeMinutes) + ':' + String(this.timeSeconds));
+                }
+            }
+            if (this.timeMinutes >= 10) {
+                if (this.timeSeconds < 10) {
+                    $("#time").html(String(this.timeMinutes) + ':0' + String(this.timeSeconds));
+                }
+                if (this.timeSeconds >= 10) {
+                    $("#time").html(String(this.timeMinutes) + ':' + String(this.timeSeconds));
+                }
+            }
+            this.timeSeconds++;
+
+        }, 1000);
+    }
+}
+const globalScore = new Score(0, 0);
+
+/*---------- END SCORE SECTION -----*/
 /*---------- PLAYER SECTION -----*/
 // CLASE JUGADOR 
 class Player {
@@ -1008,7 +838,7 @@ class Settings {
 }
 
 let playerList = [];
-/*
+
 const styleCss = document.documentElement.style;
 
 const themeGreen = document.getElementById("themeGreen");
@@ -1016,14 +846,14 @@ const themePurple = document.getElementById("themePurple");
 const themeDark = document.getElementById("themeDark");
 const themeLight = document.getElementById("themeLight");
 
-let themeOption = null;
+let themeOption = 0;
 
 themeGreen.addEventListener("click", function () { setTheme(0) });
 themePurple.addEventListener("click", function () { setTheme(1) });
 themeDark.addEventListener("click", function () { setTheme(2) });
 themeLight.addEventListener("click", function () { setTheme(3) });
-*/
-/*function setTheme(Option) {
+
+function setTheme(Option) {
 
     themeGreen.className = "themeExample green";
     themePurple.className = "themeExample purple";
@@ -1063,7 +893,7 @@ themeLight.addEventListener("click", function () { setTheme(3) });
             break;
     }
 
-}*/
+}
 
 // CREA UN NUEVO USUARIO Y LO GUARDA EN EL LOCAL STORAGE
 function createUser() {
