@@ -547,22 +547,31 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 80vh;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Exo 2', sans-serif;
   color: var(--colorSecun);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
+}
+
+.newProfileMiddle h2 {
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
 .newProfileMiddle form {
   width: 100%;
   padding-top: 5%;
-  font-family: 'Exo 2', sans-serif;
+}
+
+.newProfileMiddle form .form-label {
+  font-weight: bolder;
 }
 
 .newProfileMiddle form .form-text {
-  color: var(--colorThird);
+  color: var(--colorSecun);
 }
 
 .newProfileMiddle form .themes {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -570,8 +579,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -579,13 +589,26 @@ body {
 
 .newProfileMiddle form .themes .themeOption {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .newProfileMiddle form .themes .themeOption .themeExample {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 0.5rem;
-  border: 0.2rem solid var(--colorThird);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 2.2rem;
+  border: 0.1rem solid var(--colorThird);
 }
 
 .newProfileMiddle form .themes .themeOption .green {
@@ -612,19 +635,22 @@ body {
 }
 
 .newProfileMiddle form .themes .themeOption .activeTheme {
+  width: 2.5rem;
+  height: 2.5rem;
   border: 0.2rem solid var(--colorThird);
   border-radius: 2.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;
+  font-size: 1.4rem;
 }
 
 .newProfileMiddle form .themes .themeOption .themeDescription {
-  position: absolute;
-  padding-top: 1%;
+  margin-top: 15%;
   font-size: 1rem;
-  text-align: center;
+  text-align: start;
 }
 
 .newProfileMiddle form .sound {
-  margin-top: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,10 +672,10 @@ body {
 
 .newProfileMiddle .btn-link {
   text-decoration: none;
-  color: var(--colorPrima);
+  color: var(--colorSecun);
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
-  border: 0.1rem solid var(--colorSecun);
+  border: 0.15rem solid var(--colorThird);
   font-weight: bold;
 }
 
@@ -657,7 +683,7 @@ body {
   padding-top: 10%;
   font-family: 'Exo 2', sans-serif;
   text-decoration: underline;
-  color: var(--colorThird);
+  color: var(--colorSecun);
   font-size: 0.8em;
 }
 /*# sourceMappingURL=style.css.map */
