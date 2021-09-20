@@ -6,18 +6,25 @@
 }
 
 :root {
-  /*  --colorPrima: #4c5186;
+  /*--colorPrima: #4c5186;
     --colorSecun: #39A3CD;
     --colorThird: #43DEBB;
 
 
-    --gradientBase:rgb(30, 33, 64);
+    --gradientBase: rgb(30, 33, 64);
     --gradient: linear-gradient(180deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);
-    --gradientBoard: linear-gradient(310deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);;
-    --gradientEnd:rgba(45, 50, 94, 1);
+    --gradientBoard: linear-gradient(310deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);
+    ;
+    --gradientEnd: rgba(45, 50, 94, 1);
 */
-  /*
-    --colorPrima: #8BEC96;
+  --colorPrima: #8BEC96;
+  --colorSecun: #8FFF57;
+  --colorThird: #5A8266;
+  --gradientBase:  #18AD44;
+  --gradient:linear-gradient(180deg, #478d4f 0%, #18AD44 74%);
+  --gradientBoard:linear-gradient(0deg, #478d4f 0%, #18AD44 74%);
+  --gradientEnd: #18AD44;
+  /* --colorPrima: #8BEC96;
     --colorSecun: #8FFF57;
     --colorThird: #5A8266;    
 
@@ -25,13 +32,6 @@
     --gradient:linear-gradient(0deg, #39c74a 0%, #18AD44 74%);
     --gradientBoard:linear-gradient(180deg, #39c74a 0%, #18AD44 74%);
     --gradientEnd: #39c74a;*/
-  --colorPrima: #8BEC96;
-  --colorSecun: #8FFF57;
-  --colorThird: #5A8266;
-  --gradientBase:  #18AD44;
-  --gradient:linear-gradient(0deg, #39c74a 0%, #18AD44 74%);
-  --gradientBoard:linear-gradient(180deg, #39c74a 0%, #18AD44 74%);
-  --gradientEnd: #39c74a;
 }
 
 body {
@@ -166,6 +166,8 @@ body {
   border-radius: 0.5em;
   font-family: 'Exo 2', sans-serif;
   margin-top: 3%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .boardScreen .boardCombo #oficialBoard {
@@ -208,7 +210,8 @@ body {
 }
 
 .boardScreen .boardCombo .tablero .row_group_container .target {
-  width: 24%;
+  height: 90%;
+  width: 23%;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -234,7 +237,8 @@ body {
 }
 
 .boardScreen .boardCombo .tablero .row_group_container .targetOB {
-  width: 24%;
+  width: 23%;
+  height: 90%;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -264,6 +268,8 @@ body {
   background-color: var(--colorPrima);
   font-weight: bolder;
   color: var(--colorThird);
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .boardScreen .boardCombo .tablero .row_group_container .margLeft {
