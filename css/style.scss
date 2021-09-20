@@ -27,16 +27,18 @@
 }
 
 body {
-    background-image: linear-gradient(to right top, #1e2140, #222547, #25294f, #292e56, #2d325e);
+    background-image: linear-gradient(to right bottom, #1e2140, #222547, #25294f, #292e56, #2d325e);
     max-width: 360px;
-    max-height: 640px;
+   // max-height: 640px;
+    background-repeat:no-repeat;
+    background-size: 100%;
 }
 
 
 
 header {
-    padding-top: 1vh;
-    height: 24vh;
+    
+    height: 25vh;
     font-family: 'Fredoka One', cursive;
     display: flex;
     flex-direction: column;
@@ -55,8 +57,10 @@ header {
         //  background-color: yellow;
 
         h1 {
-            font-size: 2.4em;
-            color: rgb(72, 75, 109);
+            font-size: 2em;
+            text-align: left;
+            color: #2F9ED3;
+            opacity: 0.4;
         }
 
         .optionImg {
@@ -116,7 +120,7 @@ header {
 }
 
 #oficialBoard {
-    margin-top: -53vh;
+    margin-top: -55vh;
     z-index: 5;
 }
 
@@ -128,7 +132,7 @@ header {
     font-family: 'Exo 2', sans-serif;
 
     .tablero {
-        height: 53vh;
+        height: 55vh;
         width: 100%;
         border-radius: 0.5em;
         display: flex;
@@ -215,17 +219,13 @@ header {
     }
 }
 
-.score {
-    height: 7vh;
-}
-
 footer {
-    height: 15vh;
+    height: 18vh;
     display: flex;
     justify-content: space-between;
-
+    align-items: center;
     .logoFooter {
-        //  transform: scale(0.4);
+        transform: scale(0.5);
     }
 }
 

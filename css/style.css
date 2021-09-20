@@ -28,15 +28,15 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#1e2140), color-stop(#222547), color-stop(#25294f), color-stop(#292e56), to(#2d325e));
-  background-image: linear-gradient(to right top, #1e2140, #222547, #25294f, #292e56, #2d325e);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#1e2140), color-stop(#222547), color-stop(#25294f), color-stop(#292e56), to(#2d325e));
+  background-image: linear-gradient(to right bottom, #1e2140, #222547, #25294f, #292e56, #2d325e);
   max-width: 360px;
-  max-height: 640px;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 header {
-  padding-top: 1vh;
-  height: 24vh;
+  height: 25vh;
   font-family: 'Fredoka One', cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,8 +74,10 @@ header .option {
 }
 
 header .option h1 {
-  font-size: 2.4em;
-  color: #484b6d;
+  font-size: 2em;
+  text-align: left;
+  color: #2F9ED3;
+  opacity: 0.4;
 }
 
 header .option .optionImg {
@@ -132,7 +134,7 @@ header .scoreHeader .scoreHeaderItem .time {
 }
 
 #oficialBoard {
-  margin-top: -53vh;
+  margin-top: -55vh;
   z-index: 5;
 }
 
@@ -147,7 +149,7 @@ header .scoreHeader .scoreHeaderItem .time {
 }
 
 .boardCombo .tablero {
-  height: 53vh;
+  height: 55vh;
   width: 100%;
   border-radius: 0.5em;
   display: -webkit-box;
@@ -248,18 +250,22 @@ header .scoreHeader .scoreHeaderItem .time {
   margin-top: 1%;
 }
 
-.score {
-  height: 7vh;
-}
-
 footer {
-  height: 15vh;
+  height: 18vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .logoFooter {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 
 .back {
