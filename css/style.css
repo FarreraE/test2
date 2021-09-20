@@ -6,22 +6,6 @@
 }
 
 :root {
-  --colorBase: #222831;
-  --colorPrima: #393E46;
-  --colorSecun: #EEEEEE;
-  --colorThird: #EEEEEE;
-  /**/
-  --colorBase: #763857;
-  --colorPrima: #F4F9F9;
-  --colorSecun: #F7F6E7;
-  --colorThird: #EEEEEE;
-  /**/
-  --colorBase: #2e3154;
-  --colorPrima: #57406b;
-  --colorSecun: #e076a5;
-  --colorThird: #EEEEEE;
-  /**/
-  --colorBase: #3B4175;
   --colorPrima: #1E2140;
   --colorSecun: #DDFFBC;
   --colorThird: #EEEEEE;
@@ -30,12 +14,24 @@
 body {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#1e2140), color-stop(#222547), color-stop(#25294f), color-stop(#292e56), to(#2d325e));
   background-image: linear-gradient(to right bottom, #1e2140, #222547, #25294f, #292e56, #2d325e);
-  max-width: 360px;
   background-repeat: no-repeat;
-  background-size: 100%;
 }
 
-header {
+.boardScreen {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 560px;
+}
+
+.boardScreen header {
   height: 25vh;
   font-family: 'Fredoka One', cursive;
   display: -webkit-box;
@@ -56,7 +52,7 @@ header {
   color: var(--colorSecun);
 }
 
-header .option {
+.boardScreen header .option {
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -73,19 +69,19 @@ header .option {
           align-items: center;
 }
 
-header .option h1 {
+.boardScreen header .option h1 {
   font-size: 2em;
   text-align: left;
   color: #2F9ED3;
   opacity: 0.4;
 }
 
-header .option .optionImg {
+.boardScreen header .option .optionImg {
   -webkit-transform: scale(1);
           transform: scale(1);
 }
 
-header .scoreHeader {
+.boardScreen header .scoreHeader {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -96,7 +92,7 @@ header .scoreHeader {
   width: 90%;
 }
 
-header .scoreHeader .btn-link {
+.boardScreen header .scoreHeader .btn-link {
   text-decoration: none;
   color: #484b6d;
   font-size: 1.3rem;
@@ -107,48 +103,46 @@ header .scoreHeader .btn-link {
   padding: 0%;
 }
 
-header .scoreHeader .btn-link:hover {
+.boardScreen header .scoreHeader .btn-link:hover {
   text-decoration: none;
   border: none;
   color: #39A3CD;
 }
 
-header .scoreHeader .scoreHeaderItem {
+.boardScreen header .scoreHeader .scoreHeaderItem {
   padding: 0%;
   padding-top: 2%;
   text-align: end;
 }
 
-header .scoreHeader .scoreHeaderItem .movement {
+.boardScreen header .scoreHeader .scoreHeaderItem .movement {
   color: #39A3CD;
   font-size: 1.8rem;
   font-weight: bold;
   font-family: 'Exo 2', sans-serif;
 }
 
-header .scoreHeader .scoreHeaderItem .time {
+.boardScreen header .scoreHeader .scoreHeaderItem .time {
   color: #39A3CD;
   font-weight: bold;
   font-size: 1.8rem;
   font-family: 'Exo 2', sans-serif;
 }
 
-#oficialBoard {
+.boardScreen #oficialBoard {
   margin-top: -55vh;
   z-index: 5;
 }
 
-.boardCombo {
+.boardScreen .boardCombo {
   background-image: -webkit-gradient(linear, right bottom, left top, from(#1e2140), color-stop(#222547), color-stop(#25294f), color-stop(#292e56), to(#2d325e));
   background-image: linear-gradient(to left top, #1e2140, #222547, #25294f, #292e56, #2d325e);
   padding: 2%;
   border-radius: 0.5em;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
   font-family: 'Exo 2', sans-serif;
 }
 
-.boardCombo .tablero {
+.boardScreen .boardCombo .tablero {
   height: 55vh;
   width: 100%;
   border-radius: 0.5em;
@@ -169,7 +163,7 @@ header .scoreHeader .scoreHeaderItem .time {
   background-color: rgba(255, 255, 255, 0.02);
 }
 
-.boardCombo .tablero .row_group_container {
+.boardScreen .boardCombo .tablero .row_group_container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -182,7 +176,7 @@ header .scoreHeader .scoreHeaderItem .time {
       justify-content: space-around;
 }
 
-.boardCombo .tablero .row_group_container .target {
+.boardScreen .boardCombo .tablero .row_group_container .target {
   width: 24%;
   text-align: center;
   -webkit-box-align: center;
@@ -196,7 +190,7 @@ header .scoreHeader .scoreHeaderItem .time {
   margin: 1%;
 }
 
-.boardCombo .tablero .row_group_container .activeOne {
+.boardScreen .boardCombo .tablero .row_group_container .activeOne {
   font-weight: bolder;
   text-align: center;
   -webkit-box-align: center;
@@ -208,7 +202,7 @@ header .scoreHeader .scoreHeaderItem .time {
   font-weight: bolder;
 }
 
-.boardCombo .tablero .row_group_container .targetOB {
+.boardScreen .boardCombo .tablero .row_group_container .targetOB {
   color: --colorBase;
   width: 24%;
   text-align: center;
@@ -224,7 +218,7 @@ header .scoreHeader .scoreHeaderItem .time {
   font-weight: bolder;
 }
 
-.boardCombo .tablero .row_group_container .active {
+.boardScreen .boardCombo .tablero .row_group_container .active {
   font-weight: bolder;
   text-align: center;
   -webkit-box-align: center;
@@ -236,22 +230,22 @@ header .scoreHeader .scoreHeaderItem .time {
   font-weight: bolder;
 }
 
-.boardCombo .tablero .row_group_container .nonActive {
+.boardScreen .boardCombo .tablero .row_group_container .nonActive {
   background-color: #4c5186;
   font-weight: bolder;
   color: #43DEBB;
 }
 
-.boardCombo .tablero .row_group_container .margLeft {
+.boardScreen .boardCombo .tablero .row_group_container .margLeft {
   margin-left: 2%;
 }
 
-.boardCombo .tablero .row_group_container .margTop {
+.boardScreen .boardCombo .tablero .row_group_container .margTop {
   margin-top: 1%;
 }
 
-footer {
-  height: 18vh;
+.boardScreen footer {
+  height: 20vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -263,21 +257,21 @@ footer {
           align-items: center;
 }
 
-footer .logoFooter {
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
-}
-
-.back {
+.boardScreen footer .back {
   font-weight: bold;
   color: #39A3CD;
   font-size: 1.2em;
   font-family: 'Exo 2', sans-serif;
 }
 
-.back:hover {
+.boardScreen footer .back:hover {
   color: #39A3CD;
   font-family: 'Exo 2', sans-serif;
+}
+
+.boardScreen footer .logoFooter {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 
 .homeTop {
