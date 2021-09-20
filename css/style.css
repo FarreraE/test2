@@ -14,6 +14,7 @@
 body {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#1e2140), color-stop(#222547), color-stop(#25294f), color-stop(#292e56), to(#2d325e));
   background-image: linear-gradient(to right bottom, #1e2140, #222547, #25294f, #292e56, #2d325e);
+  background-color: #1e2140;
   background-repeat: no-repeat;
 }
 
@@ -28,11 +29,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 560px;
+  max-width: 360px;
 }
 
 .boardScreen header {
-  height: 25vh;
+  height: 24vh;
   font-family: 'Fredoka One', cursive;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,6 +54,7 @@ body {
 }
 
 .boardScreen header .option {
+  padding-top: 5%;
   width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,8 +101,10 @@ body {
   font-weight: bolder;
   font-family: 'Exo 2', sans-serif;
   letter-spacing: 0.1rem;
-  width: 100%;
   padding: 0%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
 }
 
 .boardScreen header .scoreHeader .btn-link:hover {
@@ -245,7 +249,7 @@ body {
 }
 
 .boardScreen footer {
-  height: 20vh;
+  height: 18vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
