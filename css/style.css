@@ -12,8 +12,8 @@
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#1e2140), color-stop(#222547), color-stop(#25294f), color-stop(#292e56), to(#2d325e));
-  background-image: linear-gradient(to right bottom, #1e2140, #222547, #25294f, #292e56, #2d325e);
+  background: #1e2140;
+  background: linear-gradient(130deg, #1e2140 0%, #222547 25%, #25294f 50%, #292e56 75%, #2d325e 94%);
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -26,9 +26,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   max-width: 360px;
 }
 
@@ -133,8 +133,8 @@ body {
 }
 
 .boardScreen .boardCombo {
-  background-image: -webkit-gradient(linear, right bottom, left top, from(#1e2140), color-stop(#222547), color-stop(#25294f), color-stop(#292e56), to(#2d325e));
-  background-image: linear-gradient(to left top, #1e2140, #222547, #25294f, #292e56, #2d325e);
+  background: #1e2140;
+  background: linear-gradient(310deg, #1e2140 0%, #222547 25%, #25294f 50%, #292e56 75%, #2d325e 94%);
   padding: 2%;
   border-radius: 0.5em;
   font-family: 'Exo 2', sans-serif;
