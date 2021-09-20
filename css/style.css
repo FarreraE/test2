@@ -14,8 +14,7 @@
 body {
   background: #1e2140;
   background: linear-gradient(130deg, #1e2140 0%, #222547 25%, #25294f 50%, #292e56 75%, #2d325e 94%);
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-repeat: repeat-y;
 }
 
 .boardScreen {
@@ -30,6 +29,7 @@ body {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   max-width: 360px;
+  margin-top: 2%;
 }
 
 .boardScreen header {
@@ -138,6 +138,7 @@ body {
   padding: 2%;
   border-radius: 0.5em;
   font-family: 'Exo 2', sans-serif;
+  margin-top: 3%;
 }
 
 .boardScreen .boardCombo #oficialBoard {
@@ -248,6 +249,7 @@ body {
 }
 
 .boardScreen footer {
+  padding: 4%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
