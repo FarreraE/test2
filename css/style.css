@@ -13,8 +13,11 @@
 
 body {
   background: #1e2140;
-  background: linear-gradient(130deg, #1e2140 0%, #222547 25%, #25294f 50%, #292e56 75%, #2d325e 94%);
-  background-repeat: repeat-y;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1e2140), color-stop(10%, #222547), color-stop(30%, #25294f), color-stop(75%, #292e56), color-stop(94%, #2d325e));
+  background: linear-gradient(180deg, #1e2140 0%, #222547 10%, #25294f 30%, #292e56 75%, #2d325e 94%);
+  height: auto;
+  background-repeat: no-repeat;
+  background-color: #2d325e;
 }
 
 .boardScreen {
@@ -74,7 +77,7 @@ body {
   font-size: 2em;
   text-align: left;
   color: #2F9ED3;
-  opacity: 0.4;
+  opacity: 0.6;
 }
 
 .boardScreen header .option .optionImg {
