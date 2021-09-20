@@ -6,18 +6,40 @@
 }
 
 :root {
-  --colorPrima: #1E2140;
-  --colorSecun: #DDFFBC;
-  --colorThird: #EEEEEE;
+  /*  --colorPrima: #4c5186;
+    --colorSecun: #39A3CD;
+    --colorThird: #43DEBB;
+
+
+    --gradientBase:rgb(30, 33, 64);
+    --gradient: linear-gradient(180deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);
+    --gradientBoard: linear-gradient(310deg, rgba(30, 33, 64, 1) 0%, rgba(34, 37, 71, 1) 10%, rgba(37, 41, 79, 1) 30%, rgba(41, 46, 86, 1) 75%, rgba(45, 50, 94, 1) 94%);;
+    --gradientEnd:rgba(45, 50, 94, 1);
+*/
+  /*
+    --colorPrima: #8BEC96;
+    --colorSecun: #8FFF57;
+    --colorThird: #5A8266;    
+
+    --gradientBase:  #18AD44;
+    --gradient:linear-gradient(0deg, #39c74a 0%, #18AD44 74%);
+    --gradientBoard:linear-gradient(180deg, #39c74a 0%, #18AD44 74%);
+    --gradientEnd: #39c74a;*/
+  --colorPrima: #8BEC96;
+  --colorSecun: #8FFF57;
+  --colorThird: #5A8266;
+  --gradientBase:  #18AD44;
+  --gradient:linear-gradient(0deg, #39c74a 0%, #18AD44 74%);
+  --gradientBoard:linear-gradient(180deg, #39c74a 0%, #18AD44 74%);
+  --gradientEnd: #39c74a;
 }
 
 body {
-  background: #1e2140;
-  background: -webkit-gradient(linear, left top, left bottom, from(#1e2140), color-stop(10%, #222547), color-stop(30%, #25294f), color-stop(75%, #292e56), color-stop(94%, #2d325e));
-  background: linear-gradient(180deg, #1e2140 0%, #222547 10%, #25294f 30%, #292e56 75%, #2d325e 94%);
+  background: var(--gradientBase);
+  background: var(--gradient);
   height: auto;
   background-repeat: no-repeat;
-  background-color: #2d325e;
+  background-color: var(--gradientEnd);
 }
 
 .boardScreen {
@@ -76,7 +98,7 @@ body {
 .boardScreen header .option h1 {
   font-size: 2em;
   text-align: left;
-  color: #2F9ED3;
+  color: var(--colorSecun);
   opacity: 0.6;
 }
 
@@ -98,7 +120,7 @@ body {
 
 .boardScreen header .scoreHeader .btn-link {
   text-decoration: none;
-  color: #484b6d;
+  color: var(--colorSecun);
   font-size: 1.3rem;
   font-weight: bolder;
   font-family: 'Exo 2', sans-serif;
@@ -107,12 +129,14 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  opacity: 0.5;
 }
 
 .boardScreen header .scoreHeader .btn-link:hover {
   text-decoration: none;
   border: none;
-  color: #39A3CD;
+  color: var(--colorSecun);
+  opacity: 1;
 }
 
 .boardScreen header .scoreHeader .scoreHeaderItem {
@@ -122,22 +146,22 @@ body {
 }
 
 .boardScreen header .scoreHeader .scoreHeaderItem .movement {
-  color: #39A3CD;
+  color: var(--colorSecun);
   font-size: 1.8rem;
   font-weight: bold;
   font-family: 'Exo 2', sans-serif;
 }
 
 .boardScreen header .scoreHeader .scoreHeaderItem .time {
-  color: #39A3CD;
+  color: var(--colorSecun);
   font-weight: bold;
   font-size: 1.8rem;
   font-family: 'Exo 2', sans-serif;
 }
 
 .boardScreen .boardCombo {
-  background: #1e2140;
-  background: linear-gradient(310deg, #1e2140 0%, #222547 25%, #25294f 50%, #292e56 75%, #2d325e 94%);
+  background: var(--gradientBase);
+  background: var(--gradientBoard);
   padding: 2%;
   border-radius: 0.5em;
   font-family: 'Exo 2', sans-serif;
@@ -203,14 +227,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #2F9ED3;
+  color: var(--colorSecun);
   background-color: rgba(255, 255, 255, 0);
   font-size: 2.4em;
   font-weight: bolder;
 }
 
 .boardScreen .boardCombo .tablero .row_group_container .targetOB {
-  color: --colorBase;
   width: 24%;
   text-align: center;
   -webkit-box-align: center;
@@ -231,16 +254,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #2F9ED3;
+  color: var(--colorSecun);
   background-color: rgba(255, 255, 255, 0);
   font-size: 2.4em;
   font-weight: bolder;
 }
 
 .boardScreen .boardCombo .tablero .row_group_container .nonActive {
-  background-color: #4c5186;
+  background-color: var(--colorPrima);
   font-weight: bolder;
-  color: #43DEBB;
+  color: var(--colorThird);
 }
 
 .boardScreen .boardCombo .tablero .row_group_container .margLeft {
@@ -266,13 +289,13 @@ body {
 
 .boardScreen footer .back {
   font-weight: bold;
-  color: #39A3CD;
+  color: var(--colorSecun);
   font-size: 1.2em;
   font-family: 'Exo 2', sans-serif;
 }
 
 .boardScreen footer .back:hover {
-  color: #39A3CD;
+  color: var(--colorSecun);
   font-family: 'Exo 2', sans-serif;
 }
 
