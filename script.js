@@ -1071,7 +1071,7 @@ function setTheme(Option) {
             styleCss.setProperty('--colorSecun', '#000');
             styleCss.setProperty('--colorThird', '#6d6d6d');
             styleCss.setProperty('--gradientBase', 'rgb(255, 255, 255)');
-            styleCss.setProperty('--gradient', 'linear-gradient(0deg, #282B30 0%, #fff 74%)');
+            styleCss.setProperty('--gradient', 'linear-gradient(0deg, #f0f0f0 0%, #fff 74%)');
             styleCss.setProperty('--gradientBoard', 'linear-gradient(310deg, #f0f0f0 0%, #fff 74%)');
             styleCss.setProperty('--gradientEnd', '#f0f0f0');
             break;

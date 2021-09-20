@@ -181,12 +181,12 @@ body {
 }
 
 .boardScreen .boardCombo #oficialBoard {
-  margin-top: -300px;
+  margin-top: -340px;
   z-index: 5;
 }
 
 .boardScreen .boardCombo .tablero {
-  height: 300px;
+  height: 340px;
   width: 300px;
   border-radius: 0.5em;
   display: -webkit-box;
