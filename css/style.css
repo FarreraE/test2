@@ -30,6 +30,8 @@
 body {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#1e2140), color-stop(#222547), color-stop(#25294f), color-stop(#292e56), to(#2d325e));
   background-image: linear-gradient(to right top, #1e2140, #222547, #25294f, #292e56, #2d325e);
+  max-width: 360px;
+  max-height: 640px;
 }
 
 header {
@@ -258,11 +260,6 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-footer .logoFooter {
-  -webkit-transform: scale(0.4);
-          transform: scale(0.4);
 }
 
 .back {
