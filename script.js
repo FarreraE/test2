@@ -34,10 +34,10 @@ class Score {
     }
 }
 function timeCounter(timeSeconds, timeMinutes) {
-    
+
     let timeInterval = 1000;
 
-     cronometro = setInterval(function () {
+    cronometro = setInterval(function () {
         if (timeSeconds == 60) {
             timeSeconds = 0;
             timeMinutes++;
@@ -52,8 +52,8 @@ function timeCounter(timeSeconds, timeMinutes) {
     }, timeInterval);
 
 }
-function timeCounterStop(){
-     clearInterval(cronometro);
+function timeCounterStop() {
+    clearInterval(cronometro);
 }
 function timeDisplay(timeSeconds, timeMinutes) {
 
@@ -385,7 +385,7 @@ function setGrid(board_Vector) {
                 ++randomCount;
                 validationManagerResult = validationManager(cardAux, random);
                 if (randomCount == 40) {
-                   // alert("reset Automatico");
+                    // alert("reset Automatico");
                     validationManagerResult = false;
                     return false;
                 }
@@ -794,7 +794,7 @@ function shiftCard(targetCard, oneCard, target, direction) {
         case 0:
             $("#" + target).animate({ bottom: 73.7 }, 500, function () {
                 oneCard.setValue(targetCard.getValue());
-              //  board.display_Board();
+                //  board.display_Board();
                 $("#" + target).css({ opacity: 0.0 });
                 targetCard.setValue(1);
                 $("#" + target).toggleClass('active nonActive');
@@ -983,8 +983,6 @@ function movementManager() {
 
 
 }
-
-
 /*---------- END PLAY SECTION -----*/
 
 /*---------- PLAYER SECTION -----*/
@@ -1016,12 +1014,22 @@ const themePurple = document.getElementById("themePurple");
 const themeDark = document.getElementById("themeDark");
 const themeLight = document.getElementById("themeLight");
 
-let themeOption = null;
+const themeGreenS = document.getElementById("themeGreenS");
+const themePurpleS = document.getElementById("themePurpleS");
+const themeDarkS = document.getElementById("themeDarkS");
+const themeLightS = document.getElementById("themeLightS");
 
 themeGreen.addEventListener("click", function () { setTheme(0) });
 themePurple.addEventListener("click", function () { setTheme(1) });
 themeDark.addEventListener("click", function () { setTheme(2) });
 themeLight.addEventListener("click", function () { setTheme(3) });
+
+themeGreenS.addEventListener("click", function () { setTheme(0) });
+themePurpleS.addEventListener("click", function () { setTheme(1) });
+themeDarkS.addEventListener("click", function () { setTheme(2) });
+themeLightS.addEventListener("click", function () { setTheme(3) });
+
+let themeOption = null;
 
 function setTheme(Option) {
 
@@ -1029,11 +1037,12 @@ function setTheme(Option) {
     themePurple.className = "themeExample purple";
     themeDark.className = "themeExample dark";
     themeLight.className = "themeExample light";
+
     themeOption = Option;
     switch (Option) {
 
         case 0:
-            themeGreen.className = "themeExample green activeTheme";
+            $('.themeGreen').className = "themeExample green activeTheme";
             styleCss.setProperty('--colorPrima', '#7ecc87');
             styleCss.setProperty('--colorSecun', '#4f5250');
             styleCss.setProperty('--colorThird', '#fff');
@@ -1043,7 +1052,7 @@ function setTheme(Option) {
             styleCss.setProperty('--gradientEnd', '#75b989');
             break;
         case 1:
-            themePurple.className = "themeExample purple activeTheme";
+            $('.themePurple').className = "themeExample purple activeTheme";
 
             styleCss.setProperty('--colorPrima', '#4c5186');
             styleCss.setProperty('--colorSecun', '#39A3CD');
@@ -1054,8 +1063,8 @@ function setTheme(Option) {
             styleCss.setProperty('--gradientEnd', 'rgba(45, 50, 94,1)');
             break;
         case 2:
-            themeDark.className = "themeExample dark activeTheme";
-            
+            $('.themeDark').className = "themeExample dark activeTheme";
+
             styleCss.setProperty('--colorPrima', '#5c5e62');
             styleCss.setProperty('--colorSecun', '#68d1c5');
             styleCss.setProperty('--colorThird', '#000');
@@ -1065,8 +1074,8 @@ function setTheme(Option) {
             styleCss.setProperty('--gradientEnd', '#282B30');
             break;
         case 3:
-            themeLight.className = "themeExample light activeTheme";
-            
+            $('.themeLight').className = "themeExample light activeTheme";
+
             styleCss.setProperty('--colorPrima', '#fff');
             styleCss.setProperty('--colorSecun', '#000');
             styleCss.setProperty('--colorThird', '#6d6d6d');
@@ -1138,6 +1147,7 @@ const profileScreen = document.getElementById("profileScreen");
 const newProfileScreen = document.getElementById("newProfileScreen");
 const rankingScreen = document.getElementById("rankingScreen");
 const boardScreen = document.getElementById("boardScreen");
+const newGameScreen = document.getElementById("newGameScreen");
 
 
 homeScreen.style.display = "block";
@@ -1145,24 +1155,33 @@ profileScreen.style.display = "none";
 newProfileScreen.style.display = "none";
 rankingScreen.style.display = "none";
 boardScreen.style.display = "none";
+newGameScreen.style.display = "none";
 
 //BTN
 // HOME BTN
 const newGame = document.getElementById("newGame");
 const ranking = document.getElementById("ranking");
 const profiles = document.getElementById("profiles");
+const newGamBtn = document.getElementById("newGamBtn");
+const newGamBtnProfile = document.getElementById("newGamBtnProfile");
+const newGamBtnPWOP = document.getElementById("newGamBtnPWOP");
 
-newGame.addEventListener("click", function () { screenController(1) });
+newGame.addEventListener("click", function () { screenController(6) });
 ranking.addEventListener("click", function () { screenController(3) });
 profiles.addEventListener("click", function () { screenController(4) });
+newGamBtn.addEventListener("click", function () { screenController(2) });
+newGamBtnProfile.addEventListener("click", function () { screenController(4) });
+newGamBtnPWOP.addEventListener("click", function () { alert("The board, user, score and data will not be storage"); screenController(2) });
 
 // NEW PROFILE BTN
 const submitNewProfile = document.getElementById("submitNewProfile");
 const profileNewProfile = document.getElementById("profileNewProfile");
 const playNoProfile = document.getElementById("playNoProfile");
+//const settingsBtn = document.getElementById("settingsBtn");
 
 submitNewProfile.addEventListener("click", function () { screenController(2) });
 profileNewProfile.addEventListener("click", function () { screenController(1) });
+//settingsBtn.addEventListener("click", function () { screenController(5) });
 playNoProfile.addEventListener("click", function () { alert("The board, user, score and data will not be storage"); screenController(2) });
 
 // GO BACK BTN
@@ -1183,6 +1202,8 @@ function screenController(option) {
     newProfileScreen.style.display = "none";
     rankingScreen.style.display = "none";
     boardScreen.style.display = "none";
+    settingsScreen.style.display = "none";
+    newGameScreen.style.display = "none";
 
     switch (option) {
         case 0:
@@ -1200,6 +1221,29 @@ function screenController(option) {
         case 4:
             profileScreen.style.display = "block";
             break;
+        case 5:
+            settingsScreen.style.display = "block";
+            break;
+        case 6:
+            newGameScreen.style.display = "block";
+            break;
     }
 
 }
+
+
+
+// Obtener referencia a botones
+// Recuerda: el punto . indica clases
+const settingsBTNGroup = document.querySelectorAll(".settingsBtn");
+// Definir función y evitar definirla de manera anónima
+
+const settingsCall = function (evento) {
+    screenController(5);
+}
+
+// botones es un arreglo así que lo recorremos
+settingsBTNGroup.forEach(settingsBtn => {
+    //Agregar listener
+    settingsBtn.addEventListener("click", settingsCall);
+});

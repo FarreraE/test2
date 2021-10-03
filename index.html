@@ -22,9 +22,9 @@
 <body id="body">
 
     <!-- HOME -->
-    <div class="containers" id="homeScreen">
-        <div class="homeTop">
-            <img src="img/settings.svg" class="homeTop__Img" alt="settings">
+    <div class="container-fluid section" id="homeScreen">
+        <div class="row homeTop">
+            <img src="img/settings.svg" class="homeBottom__Img settingsBtn" alt="settings">
         </div>
         <div class="homeMiddle">
             <h1>PUZKU</h1>
@@ -38,8 +38,31 @@
             <img src="img/e-logoCreamaPurple.svg" class="homeBottom__Img" alt="logo">
         </div>
     </div>
-  <!-- NEW PROFILES  -->
-    <div class="container-fluid" id="newProfileScreen">
+    <!-- NEW GAME  -->
+    <div class="container-fluid section" id="newGameScreen">
+        <div class=" row homeTop">
+            <img src="img/settings.svg" class=" homeBottom__Img settingsBtn" alt="settings">
+        </div>
+        <div class="homeMiddle">
+            <div class="player">
+                <div class="row">
+                    <h3>NOMBRE </h3>
+                </div>
+            </div>
+            <button type="button" class="btn btn-link newGamBtn" id="newGamBtn">
+                PLAY</button>
+            <button type="button" class="btn btn-link newGamBtn" id="newGamBtnProfile">CHANGE
+                PROFILE</button>
+            <button type="button" class="btn btn-link newGamBtn" id="newGamBtnPWOP">PLAY WITHOUT
+                PROFILE</button>
+
+        </div>
+        <div class="homeBottom">
+            <img src="img/e-logoCreamaPurple.svg" class="homeBottom__Img" alt="logo">
+        </div>
+    </div>
+    <!-- NEW PROFILES  -->
+    <div class="container-fluid section" id="newProfileScreen">
         <div class="homeTop">
 
         </div>
@@ -99,9 +122,9 @@
         </div>
     </div>
     <!-- PROFILES  -->
-    <div class="container-fluid" id="profileScreen">
-        <div class="homeTop">
-            <img src="img/settings.svg" class="homeTop__Img" alt="settings">
+    <div class="container-fluid section" id="profileScreen">
+        <div class="row homeTop">
+            <img src="img/settings.svg" class="homeTop__Img settingsBtn" alt="settings">
         </div>
         <div class="offset-1 col-10 profileMiddle">
             <h2>PROFILES</h2>
@@ -133,11 +156,10 @@
             <button type="button" class="btn back" id="goBack3">GO BACK</button>
         </div>
     </div>
-
     <!-- RANKING  -->
-    <div class="container-fluid" id="rankingScreen">
-        <div class="homeTop">
-            <img src="img/settings.svg" class="homeTop__Img" alt="settings">
+    <div class="container-fluid section" id="rankingScreen">
+        <div class="row homeTop">
+            <img src="img/settings.svg" class="homeTop__Img settingsBtn" alt="settings">
         </div>
         <div class="offset-1 col-10 scoreMiddle" id="rankingScreenDisplay">
 
@@ -147,33 +169,37 @@
             <button type="button" class="btn back" id="goBack4">GO BACK</button>
         </div>
     </div>
-    <!-- SETTINGS 
-    <div class="container-fluid" id="settingsScreen">
+    <!-- SETTINGS -->
+    <div class="container-fluid section" id="settingsScreen">
         <div class="homeTop">
 
         </div>
         <div class="offset-1 col-10 newProfileMiddle">
             <h2>SETTINGS</h2>
-
             <form>
+                <div class="mb-3">
+                    <label for="playerName" class="form-label">Username</label>
+                    <input type="text" class="form-control" id="playerName" aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">8 Characters Maximum</div>
+                </div>
                 <div class="mb-3">
                     <label for="username" class="form-label">Theme</label>
                     <div class="themes">
                         <div class="themeOption">
-                            <div class="themeExample green activeTheme" id="themeGreen"></div>
+                            <div class="themeExample green activeTheme" id="themeGreenS"></div>
                             <p class="themeDescription">Green</p>
                         </div>
                         <div class="themeOption">
-                            <div class="themeExample purple" id="themePurple"></div>
+                            <div class="themeExample purple" id="themePurpleS"></div>
                             <p class="themeDescription">Purple</p>
                         </div>
                         <div class="themeOption">
-                            <div class="themeExample dark" id="themeDark"></div>
-                            <p class="themeDescription">Dark</p>
+                            <div class="themeExample light" id="themeLightS"></div>
+                            <p class="themeDescription">Light</p>
                         </div>
                         <div class="themeOption">
-                            <div class="themeExample light" id="themeLight"></div>
-                            <p class="themeDescription">Light</p>
+                            <div class="themeExample dark" id="themeDarkS"></div>
+                            <p class="themeDescription">Dark</p>
                         </div>
                     </div>
                 </div>
@@ -202,7 +228,7 @@
             <button type="button" class="btn back" id="goBack2">GO BACK</button>
         </div>
     </div>
--->
+    -->
     <!-- TABLERO -->
     <div class="container-fluid boardScreen" id="boardScreen">
         <header>
@@ -211,7 +237,7 @@
                     <h1>PUZKU</h1>
                 </div>
                 <div class="col-2">
-                    <img src="img/settings.svg" class="optionImg" alt="settings">
+                    <img src="img/settings.svg" class="optionImg settingsBtn" alt="settings">
                 </div>
             </div>
             <div class="row scoreHeader">
@@ -226,7 +252,7 @@
                 </div>
             </div>
         </header>
-        <div class="container">
+        <div class="container section">
             <div class="col-12 boardCombo">
                 <div class="container tablero" id="oneBoard">
                     <div class="row row_group_container">
@@ -283,11 +309,13 @@
             </div>
         </div>
         <footer>
-            <div class="col-9">
-                <button type="button" class="btn back" id="goBack5">GO BACK</button>
-            </div>
-            <div class="col">
-                <img src="img/e-logoCreamaPurple.svg" class="logoFooter" alt="">
+            <div class="row">
+                <div class="col-9">
+                    <button type="button" class="btn back" id="goBack5">GO BACK</button>
+                </div>
+                <div class="col-2">
+                    <img src="img/e-logoCreamaPurple.svg" class="logoFooter" alt="">
+                </div>
             </div>
         </footer>
     </div>

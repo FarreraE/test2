@@ -18,10 +18,12 @@
         padding-top: 5%;
 
         .form-label{
+            font-size: 1.4rem;
             font-weight: bolder; 
         }
         .form-text {
             color: var(--colorSecun);
+            font-size: 1.2rem;
         }
 
         .themes {
@@ -43,8 +45,9 @@
                     width: 2.2rem;
                     height: 2.2rem;
                     border-radius: 2.2rem;
-                    border: 0.1rem solid var(--colorThird);
-
+                    border: 0.15rem solid var(--colorPrima);
+                    font-weight: bolder;
+                    box-shadow: rgba(0, 0, 0, 0.6) 0px 5px 5px;
 
                 }
 
@@ -71,15 +74,14 @@
                 .activeTheme {
                     width: 2.5rem;
                     height: 2.5rem;
-                    border: 0.2rem solid var(--colorThird);
+                    border: 0.2rem solid var(--colorSecun);
                     border-radius: 2.5rem;
-                    box-shadow: rgba(0, 0, 0, 0.4) 0px 5px 15px;   
-                    font-size: 1.4rem;
+                    box-shadow: rgba(0, 0, 0, 1) 0px 4px 15px;   
+                    
                 }
-
                 .themeDescription {
                     margin-top: 15%;
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                     text-align: start;
                 }
             }
@@ -103,7 +105,7 @@
         color: var(--colorSecun);
         font-size: 1.2rem;
         letter-spacing: 0.1rem;
-        border: 0.15rem solid var(--colorThird);
+        border: 0.05rem solid var(--colorSecun);
         font-weight: bold;
     }
 

@@ -1,10 +1,10 @@
 .homeTop {
     height: 10vh;
 
-    .homeTop__Img {
+    .settingsBtn {
         padding-top: 2%;
         padding-right: 5%;
-        width: 14%;
+        max-width: 14%;
         float: right;
     }
 }
@@ -20,7 +20,7 @@
     h1 {
         font-size: 4em;
         font-family: 'Fredoka One', cursive;
-        color: var(--colorThird);
+        color: var(--colorSecun);
     }
 
     ul {
@@ -33,7 +33,7 @@
         li {
             list-style: none;
             text-decoration: none;
-            color: var(--colorThird);
+            color: var(--colorSecun);
             font-family: 'Exo 2', sans-serif;
             font-size: 1.2em;
         }
