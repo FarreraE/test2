@@ -17,6 +17,10 @@
 }
 
 body {
+
+
+
+
     background: var(--gradient);
     background-repeat: no-repeat;
     background-color: var(--gradientEnd);
@@ -24,11 +28,32 @@ body {
 
 .section {
     max-width: 576px;
-    height: 95vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    .footer {
+        padding: 4%;
+        //  height: 18vh;
+
+
+        .home {
+            color: var(--colorSecun);
+            font-size: 1em;
+            font-family: 'Exo 2', sans-serif;
+
+        }
+
+        .home:hover {
+            color: var(--colorSecun);
+            font-family: 'Exo 2', sans-serif;
+        }
+
+        .logoFooter {
+            width: 28%;
+        }
+    }
 }
 
 .boardScreen {
@@ -231,29 +256,29 @@ body {
         }
     }
 
-    footer {
-        padding: 4%;
-        //  height: 18vh;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
-        .back {
-            font-weight: bold;
-            color: var(--colorSecun);
-            font-size: 1.2em;
-            font-family: 'Exo 2', sans-serif;
+}
 
-        }
 
-        .back:hover {
-            color: var(--colorSecun);
-            font-family: 'Exo 2', sans-serif;
-        }
+footer {
+    padding: 4%;
+    //  height: 18vh;
 
-        .logoFooter {
-            transform: scale(0.5);
-        }
+
+    .home {
+        color: var(--colorSecun);
+        font-size: 1em;
+        font-family: 'Exo 2', sans-serif;
+
+    }
+
+    .home:hover {
+        color: var(--colorSecun);
+        font-family: 'Exo 2', sans-serif;
+    }
+
+    .logoFooter {
+       width: 28%
     }
 }
 

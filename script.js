@@ -1185,15 +1185,7 @@ profileNewProfile.addEventListener("click", function () { screenController(1) })
 playNoProfile.addEventListener("click", function () { alert("The board, user, score and data will not be storage"); screenController(2) });
 
 // GO BACK BTN
-const goBack2 = document.getElementById("goBack2");
-const goBack3 = document.getElementById("goBack3");
-const goBack4 = document.getElementById("goBack4");
-const goBack5 = document.getElementById("goBack5");
 
-goBack2.addEventListener("click", function () { screenController(0) });
-goBack3.addEventListener("click", function () { screenController(0) });
-goBack4.addEventListener("click", function () { screenController(0) });
-goBack5.addEventListener("click", function () { screenController(0) });
 
 function screenController(option) {
 
@@ -1234,16 +1226,19 @@ function screenController(option) {
 
 
 // Obtener referencia a botones
-// Recuerda: el punto . indica clases
 const settingsBTNGroup = document.querySelectorAll(".settingsBtn");
-// Definir función y evitar definirla de manera anónima
-
 const settingsCall = function (evento) {
     screenController(5);
 }
-
-// botones es un arreglo así que lo recorremos
 settingsBTNGroup.forEach(settingsBtn => {
-    //Agregar listener
     settingsBtn.addEventListener("click", settingsCall);
+});
+
+// Obtener referencia a botones
+const homeBTNGroup = document.querySelectorAll(".home");
+const homeCall = function (evento) {
+    screenController(0);
+}
+homeBTNGroup.forEach(homeBtn => {
+    homeBtn.addEventListener("click", homeCall);
 });
